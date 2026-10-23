@@ -1,0 +1,1401 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>4-H 경진대회 암기장</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Jua&display=swap">
+<style>
+/* Layout: a field workbook. One 760px column under a sticky tab strip; questions are index cards,
+   tests look like a graded 시험지 (red ○ and /), recitation stages read like a pledge certificate. */
+:root{
+  --paper:#F2F5EC; --card:#FFFFFF; --sunk:#E8EEE3;
+  --ink:#1A281E; --ink-2:#55665A; --ink-3:#86958A;
+  --line:#D5DFD0; --line-2:#BCCAB6;
+  --leaf:#2C8546; --leaf-ink:#1D6234; --leaf-soft:#E1EFE1; --on-leaf:#FFFFFF;
+  --wheat:#E3AE34; --wheat-soft:#FAEDC4;
+  --pen:#CF3A2E; --pen-soft:#FBE5E2;
+  --amber:#9C620D; --sky:#3271AE;
+  --m0:#DCE4D7; --m1:#BFDDC4; --m2:#8CC499; --m3:#4FA368; --m4:#1D6234;
+  --shadow:rgba(26,40,30,.08);
+  --f-display:"Jua","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --f-body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;
+  --f-recite:"Gowun Batang","AppleMyungjo","Batang","Noto Serif KR",serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0F1712; --card:#172119; --sunk:#1D2A20;
+    --ink:#E3ECE2; --ink-2:#A3B4A6; --ink-3:#74867A;
+    --line:#2A3A2E; --line-2:#3A4D3F;
+    --leaf:#5DBE7B; --leaf-ink:#9EE0B1; --leaf-soft:#1C3323; --on-leaf:#0B160F;
+    --wheat:#E8C35A; --wheat-soft:#3B321A;
+    --pen:#F0786B; --pen-soft:#3D201D;
+    --amber:#F0AE4B; --sky:#7DB4E8;
+    --m0:#26352A; --m1:#2A4B33; --m2:#3C7049; --m3:#519A65; --m4:#8FDCA6;
+    --shadow:rgba(0,0,0,.35);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0F1712; --card:#172119; --sunk:#1D2A20;
+  --ink:#E3ECE2; --ink-2:#A3B4A6; --ink-3:#74867A;
+  --line:#2A3A2E; --line-2:#3A4D3F;
+  --leaf:#5DBE7B; --leaf-ink:#9EE0B1; --leaf-soft:#1C3323; --on-leaf:#0B160F;
+  --wheat:#E8C35A; --wheat-soft:#3B321A;
+  --pen:#F0786B; --pen-soft:#3D201D;
+  --amber:#F0AE4B; --sky:#7DB4E8;
+  --m0:#26352A; --m1:#2A4B33; --m2:#3C7049; --m3:#519A65; --m4:#8FDCA6;
+  --shadow:rgba(0,0,0,.35);
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.6;word-break:keep-all;overflow-wrap:anywhere}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--leaf);outline-offset:2px;border-radius:6px}
+
+/* ---------- top band ---------- */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);border-bottom:1px solid var(--line)}
+.top-in,.tabs-in,.main{max-width:760px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.top-in{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:10px 6px}
+.brand{display:flex;align-items:center;gap:8px;font-family:var(--f-display);font-size:19px;letter-spacing:-.2px;min-width:0}
+.brand span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.who{display:flex;align-items:center;gap:8px;border:1px solid var(--line-2);background:var(--card);border-radius:999px;padding:4px 12px 4px 4px;font-weight:600;font-size:15px;flex:none}
+.who-x{font-weight:500;font-size:12px;color:var(--ink-3)}
+.tabs-in{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+.tabs-in::-webkit-scrollbar{display:none}
+.tab{flex:1 0 auto;min-width:58px;border:0;background:none;padding:8px 10px 10px;font-weight:600;font-size:15px;color:var(--ink-2);border-bottom:3px solid transparent}
+.tab.on{color:var(--leaf-ink);border-bottom-color:var(--leaf)}
+
+.main{padding-block:20px 72px;display:flex;flex-direction:column;gap:24px}
+.main > *{min-width:0}
+
+/* ---------- type ---------- */
+.h1{font-family:var(--f-display);font-weight:400;font-size:28px;line-height:1.25;margin:0;text-wrap:balance}
+.h1 small{font-family:var(--f-body);font-size:15px;color:var(--ink-3);font-weight:500;margin-left:6px}
+.h2{font-family:var(--f-display);font-weight:400;font-size:22px;line-height:1.3;margin:0 0 10px;text-wrap:balance}
+.h3{font-size:16px;font-weight:700;margin:16px 0 8px}
+.sub{color:var(--ink-2);margin:6px 0 0;max-width:62ch}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--leaf-ink);margin:0 0 4px}
+.tiny{font-size:13px;color:var(--ink-3);margin:6px 0 0}
+.note{font-size:13.5px;color:var(--amber);background:var(--wheat-soft);border-radius:8px;padding:8px 10px;margin:10px 0 0}
+.num{font-variant-numeric:tabular-nums}
+
+/* ---------- surfaces & controls ---------- */
+.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;border:1px solid var(--line-2);background:var(--card);border-radius:10px;padding:10px 16px;font-weight:600;font-size:15px;line-height:1.2;transition:transform .08s ease,background .15s}
+.btn:active{transform:translateY(1px)}
+.btn.primary{background:var(--leaf);border-color:var(--leaf);color:var(--on-leaf)}
+.btn.ghost{background:transparent}
+.btn.warn{color:var(--pen);border-color:var(--pen)}
+.btn.sm{padding:7px 12px;font-size:14px;border-radius:8px}
+.btn.lg{padding:14px 22px;font-size:17px;border-radius:12px}
+.btn:disabled{opacity:.45;cursor:default}
+.link{border:0;background:none;padding:4px 0;color:var(--leaf-ink);font-weight:600;font-size:14px;text-decoration:underline;text-underline-offset:3px}
+.tog{display:inline-flex;align-items:center;gap:8px;font-size:15px;color:var(--ink-2);cursor:pointer}
+.tog input{width:18px;height:18px;accent-color:var(--leaf)}
+.seg{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;background:var(--sunk);border-radius:12px;padding:4px}
+.seg button{border:0;background:none;border-radius:9px;padding:10px 6px;font-weight:600;font-size:15px;color:var(--ink-2)}
+.seg button.on{background:var(--card);color:var(--leaf-ink);box-shadow:0 1px 3px var(--shadow)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border:1px solid var(--line-2);background:var(--card);border-radius:999px;padding:6px 14px;font-weight:600;font-size:14.5px;display:inline-flex;gap:6px;align-items:baseline}
+.chip small{font-weight:500;color:var(--ink-3);font-size:12px}
+.chip.on{background:var(--leaf);border-color:var(--leaf);color:var(--on-leaf)}
+.chip.on small{color:var(--on-leaf);opacity:.8}
+.av{--c:var(--leaf);display:inline-grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--c);color:var(--paper);font-family:var(--f-display);font-size:22px;flex:none}
+.av.sm{width:28px;height:28px;font-size:15px}
+.av.lg{width:56px;height:56px;font-size:28px}
+.flash{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--paper);padding:10px 16px;border-radius:10px;font-size:14.5px;z-index:20;max-width:calc(100% - 32px);box-shadow:0 6px 20px var(--shadow)}
+
+/* clover */
+.clv{flex:none;display:block}
+.clv .lf{fill:var(--m0);stroke:var(--card);stroke-width:.9}
+.clv .lf.on{fill:var(--leaf)}
+.brand-c .lf{stroke:var(--paper)}
+
+/* mastery bar */
+.mbar{display:flex;height:10px;border-radius:5px;overflow:hidden;background:var(--m0);min-width:0}
+.mbar i{display:block;height:100%}
+.mbar .m0{background:var(--m0)} .mbar .m1{background:var(--m1)} .mbar .m2{background:var(--m2)} .mbar .m3{background:var(--m3)} .mbar .m4{background:var(--m4)}
+.legend{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:12.5px;color:var(--ink-3);margin:8px 0 0}
+.legend span{display:inline-flex;align-items:center;gap:5px}
+.legend i{width:10px;height:10px;border-radius:3px;display:inline-block}
+
+/* ---------- pick ---------- */
+.pick-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:16px}
+.pcard{display:flex;flex-direction:column;gap:12px;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;transition:border-color .15s, transform .1s}
+.pcard:hover{border-color:var(--leaf)}
+.pcard:active{transform:translateY(1px)}
+.pcard-h{display:flex;align-items:center;gap:12px}
+.pname{font-family:var(--f-display);font-size:24px}
+.pstats{display:grid;grid-template-columns:1fr 1fr;gap:6px 10px;font-size:13.5px;color:var(--ink-2)}
+.pstats b{display:block;color:var(--ink);font-size:17px;font-variant-numeric:tabular-nums}
+.store-warn{border:1px solid var(--pen);color:var(--pen);background:var(--pen-soft);border-radius:10px;padding:10px 12px;font-size:14px}
+
+/* ---------- study home ---------- */
+.hero{display:grid;grid-template-columns:1fr auto;gap:16px 24px;align-items:center}
+.big{margin:2px 0 10px;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.big b{font-family:var(--f-display);font-weight:400;font-size:44px;line-height:1;color:var(--leaf-ink);font-variant-numeric:tabular-nums}
+.big span{color:var(--ink-2)}
+.hero-r{display:flex;flex-direction:column;align-items:stretch;max-width:240px}
+.mode-desc{font-size:14.5px;color:var(--ink-2);margin:10px 0 0}
+.ladder{display:flex;flex-wrap:wrap;gap:6px 14px;margin:12px 0 0;padding:12px 14px;background:var(--sunk);border-radius:10px;font-size:13.5px;color:var(--ink-2)}
+.ladder span{display:inline-flex;align-items:center;gap:6px}
+.units{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.urow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px 16px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.ur-t{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 8px;min-width:0}
+.un{font-family:var(--f-display);font-size:15px;color:var(--leaf-ink)}
+.ur-t b{font-size:16.5px}
+.ur{font-size:13px;color:var(--ink-3)}
+.ur-bar{grid-column:1 / 2;display:flex;align-items:center;gap:10px;min-width:0}
+.ur-bar .mbar{flex:1}
+.ur-n{font-size:13px;color:var(--ink-2);white-space:nowrap;font-variant-numeric:tabular-nums}
+.ur-a{grid-row:1 / span 2;grid-column:2;display:flex;gap:6px}
+.urow.alt{background:transparent;border-style:dashed}
+
+/* ---------- drill ---------- */
+.dtop{display:flex;gap:12px;align-items:center}
+.dprog{flex:1;min-width:0}
+.dprog-t{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:14px;color:var(--ink-2)}
+.dprog-t b{color:var(--ink)}
+.pbar{height:8px;border-radius:4px;background:var(--m0);overflow:hidden;margin-top:6px}
+.pbar i{display:block;height:100%;background:var(--leaf);transition:width .3s ease}
+.qcard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 2px 10px var(--shadow)}
+.qmeta{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;font-size:13px;color:var(--ink-2)}
+.qno{font-weight:700;color:var(--leaf-ink);font-variant-numeric:tabular-nums}
+.tchip{border:1px solid var(--line-2);border-radius:999px;padding:1px 8px;font-size:12px}
+.qlv{display:inline-flex;align-items:center;gap:5px;margin-left:auto}
+.again,.lastres{font-size:13.5px;margin:10px 0 0;padding:6px 10px;border-radius:8px;background:var(--wheat-soft);color:var(--amber)}
+.lastres.ok{background:var(--leaf-soft);color:var(--leaf-ink)}
+.lastres.ng{background:var(--pen-soft);color:var(--pen)}
+.qtext{font-size:19px;line-height:1.7;margin:14px 0 16px;max-width:62ch}
+.olist{margin:0 0 16px;padding-left:22px;color:var(--ink-2)}
+.opts{display:grid;gap:8px}
+.opt{display:flex;align-items:center;gap:10px;text-align:left;border:1px solid var(--line-2);background:var(--card);border-radius:12px;padding:12px 14px;font-size:16.5px;font-weight:500}
+.opt-n{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--sunk);font-size:13px;font-weight:700;color:var(--ink-2);flex:none}
+.opt:hover:not(:disabled){border-color:var(--leaf)}
+.opt.right{border-color:var(--leaf);background:var(--leaf-soft);color:var(--leaf-ink)}
+.opt.wrong{border-color:var(--pen);background:var(--pen-soft);color:var(--pen)}
+.opt:disabled{cursor:default}
+.oxs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ox{font-family:var(--f-display);font-size:42px;justify-content:center;padding:14px}
+.ain{display:flex;gap:8px;flex-wrap:wrap}
+.ain input{flex:1 1 220px;min-width:0;border:2px solid var(--line-2);background:var(--sunk);border-radius:12px;padding:12px 14px;font-size:18px}
+.ain input:focus{border-color:var(--leaf);outline:none;background:var(--card)}
+.ans{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 12px;border-top:1px dashed var(--line-2);padding-top:14px;margin-top:4px}
+.ans span{font-size:13px;color:var(--ink-3);font-weight:700}
+.ans b{font-family:var(--f-display);font-weight:400;font-size:28px;color:var(--leaf-ink);line-height:1.2}
+.fb{margin-top:14px;border-radius:12px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+.fb.ok{background:var(--leaf-soft);color:var(--leaf-ink)}
+.fb.ng{background:var(--pen-soft);color:var(--pen)}
+.fb-h{font-family:var(--f-display);font-size:22px;line-height:1.2}
+.fb p{margin:0;font-size:14.5px}
+.fb .mine{color:var(--ink-2)}
+.lvchg{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;color:var(--ink-2)}
+.dact{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.dact .btn{flex:1 1 140px}
+.wlist{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.wlist li{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:4px 10px;padding:10px 0;border-top:1px solid var(--line);align-items:baseline}
+.wq{color:var(--ink-2);font-size:14.5px}
+.wa{color:var(--leaf-ink);text-align:right}
+.wc{font-size:12.5px;color:var(--pen);white-space:nowrap}
+
+/* ---------- list view ---------- */
+.ptop{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.qtable{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:0;background:var(--card);border:1px solid var(--line);border-radius:14px}
+.qtable li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:12px;padding:14px 16px;border-top:1px solid var(--line)}
+.qtable li:first-child{border-top:0}
+.qt-h{display:flex;flex-direction:column;align-items:center;gap:6px}
+.qt-h .qno{font-size:17px}
+.qt-b p{margin:0;font-size:15px;line-height:1.65}
+.qt-o{display:block;color:var(--ink-3);font-size:13.5px;margin-top:4px}
+.qt-a{margin-top:8px;border:1px dashed var(--leaf);background:var(--leaf-soft);color:var(--leaf-ink);border-radius:8px;padding:6px 12px;font-weight:700;font-size:15.5px;text-align:left}
+.qt-a.hid{color:transparent;background:var(--sunk);border-color:var(--line-2);position:relative;min-width:120px}
+.qt-a.hid::after{content:"눌러서 정답 보기";position:absolute;left:12px;top:6px;color:var(--ink-3);font-weight:500;font-size:13.5px}
+
+/* ---------- exam ---------- */
+.ecards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.ecard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:8px}
+.ecard .es{font-size:13.5px;color:var(--ink-2)}
+.ecard .es b{color:var(--ink);font-variant-numeric:tabular-nums}
+.cfg{display:flex;flex-direction:column;gap:12px}
+.cfg-r{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.cfg-r > span{font-size:14px;color:var(--ink-2);width:3.5em;flex:none}
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+table.tbl{border-collapse:collapse;width:100%;font-size:14.5px}
+.tbl th,.tbl td{padding:9px 12px;text-align:left;border-top:1px solid var(--line);white-space:nowrap}
+.tbl thead th{border-top:0;font-size:12.5px;color:var(--ink-3);font-weight:700;letter-spacing:.04em}
+.tbl td.r,.tbl th.r{text-align:right;font-variant-numeric:tabular-nums}
+.tbl td.wrap{white-space:normal;min-width:12em}
+.kbadge{display:inline-block;font-size:12px;font-weight:700;border-radius:6px;padding:1px 7px;background:var(--sunk);color:var(--ink-2)}
+.kbadge.test{background:var(--pen-soft);color:var(--pen)}
+.kbadge.recite{background:var(--wheat-soft);color:var(--amber)}
+.kbadge.drill{background:var(--leaf-soft);color:var(--leaf-ink)}
+
+.paper{background:var(--card);border:1px solid var(--line-2);border-radius:6px;box-shadow:0 2px 14px var(--shadow);padding:0}
+.ph{position:relative;display:flex;justify-content:space-between;gap:12px 20px;flex-wrap:wrap;padding:20px 20px 16px;border-bottom:3px double var(--line-2)}
+.ph-k{margin:0;font-size:12px;letter-spacing:.1em;color:var(--ink-3);font-weight:700}
+.ph-t{font-family:var(--f-display);font-weight:400;font-size:26px;margin:2px 0 0}
+.ph-m{margin:2px 0 0;color:var(--ink-2);font-size:14px}
+.ph-r{display:flex;gap:16px;align-items:flex-end}
+.ph-r > div{display:flex;flex-direction:column;align-items:flex-start;min-width:72px;border-bottom:1px solid var(--ink-3);padding-bottom:2px}
+.ph-r span{font-size:11.5px;color:var(--ink-3);font-weight:700}
+.ph-r b{font-size:18px;font-variant-numeric:tabular-nums}
+.ph-r .stamp{width:84px;height:84px;margin:-22px 0 -10px;border:3px solid var(--pen);border-radius:50%;color:var(--pen);display:flex;flex-direction:row;align-items:baseline;justify-content:center;padding-top:18px;transform:rotate(-12deg);background:var(--card);min-width:0}
+.ph-r .stamp b{font-family:var(--f-display);font-weight:400;font-size:36px;line-height:1;color:var(--pen)}
+.ph-r .stamp span{font-family:var(--f-display);font-size:15px;color:var(--pen)}
+.gsum{padding:14px 20px;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+.gsum p{margin:0}
+.plist{list-style:none;margin:0;padding:0}
+.pq{display:grid;grid-template-columns:44px minmax(0,1fr);gap:10px;padding:16px 20px 16px 14px;border-bottom:1px solid var(--line)}
+.pnum{position:relative;width:40px;height:40px;display:grid;place-items:center;font-family:var(--f-display);font-size:19px}
+.pnum span{position:relative}
+.mk{position:absolute;inset:0;width:40px;height:40px;fill:none;stroke:var(--pen);stroke-width:3.2;stroke-linecap:round}
+.pbody{min-width:0}
+.pmeta{margin:0;font-size:12px;color:var(--ink-3);font-weight:600}
+.ptext{margin:2px 0 10px;font-size:16px;line-height:1.7}
+.pin{width:100%;max-width:420px;border:0;border-bottom:2px solid var(--line-2);background:transparent;padding:6px 2px;font-size:17px}
+.pin:focus{outline:none;border-bottom-color:var(--leaf)}
+.popts{display:flex;flex-wrap:wrap;gap:6px}
+.popt{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line-2);background:var(--card);border-radius:999px;padding:6px 12px;font-size:14.5px}
+.popt.sel{border-color:var(--ink);background:var(--sunk);font-weight:700}
+.popts.ox .popt{font-family:var(--f-display);font-size:22px;padding:2px 20px}
+.popt.right{border-color:var(--leaf);color:var(--leaf-ink);background:var(--leaf-soft)}
+.popt.wrong{border-color:var(--pen);color:var(--pen);background:var(--pen-soft);text-decoration:line-through}
+.popt:disabled{cursor:default}
+.pans{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline;font-size:16px}
+.pans .mine.x{color:var(--pen);text-decoration:line-through}
+.pans .right{color:var(--pen);font-weight:700}
+.pfoot{padding:18px 20px;display:flex;justify-content:center}
+.confirm{text-align:center}
+.confirm p{margin:0 0 10px}
+
+/* ---------- recite ---------- */
+.rhead{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap}
+.rprog{font-size:14px;color:var(--ink-2)}
+.rprog b{font-family:var(--f-display);font-weight:400;font-size:30px;color:var(--leaf-ink);font-variant-numeric:tabular-nums}
+.steps{list-style:none;margin:0;padding:2px 0 6px;display:flex;gap:6px;overflow-x:auto}
+.step{display:flex;flex-direction:column;align-items:center;gap:4px;border:0;background:none;padding:4px 2px;min-width:64px}
+.sn{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;border:2px solid var(--line-2);font-weight:700;font-size:14px;color:var(--ink-2);background:var(--card)}
+.sl{font-size:12px;color:var(--ink-2);white-space:nowrap}
+.step.done .sn{background:var(--leaf-soft);border-color:var(--leaf);color:var(--leaf-ink)}
+.step.on .sn{background:var(--leaf);border-color:var(--leaf);color:var(--on-leaf)}
+.step.on .sl{color:var(--ink);font-weight:700}
+.stage{display:flex;flex-direction:column;gap:14px}
+.stage-h{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+.stage-h h3{margin:0;font-family:var(--f-display);font-weight:400;font-size:21px}
+.shint{margin:0;font-size:14px;color:var(--ink-2)}
+.rtext{font-family:var(--f-recite);font-size:21px;line-height:2.1;padding:18px 20px;border:1px solid var(--line-2);border-radius:8px;background:var(--card);box-shadow:inset 0 0 0 4px var(--sunk)}
+.rtext p{margin:0}
+.rtext .chorus{color:var(--ink-3);font-size:18px}
+.rtext .lab{font-family:var(--f-body);font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--ink-3);display:block;line-height:1.4;margin-top:8px}
+.rtext .lab:first-child{margin-top:0}
+.kw{background:linear-gradient(transparent 58%, var(--wheat-soft) 58%);font-weight:700}
+.hj{color:var(--amber);font-size:.92em}
+.meaning{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.meaning div{border:1px solid var(--line);border-radius:10px;padding:10px 8px;text-align:center;background:var(--card)}
+.meaning b{display:block;font-family:var(--f-recite);font-size:30px;color:var(--amber);line-height:1.2}
+.meaning span{display:block;font-size:13px;color:var(--ink-2)}
+.meaning em{font-style:normal;font-weight:700;font-size:14px;color:var(--ink)}
+.gloss{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 14px;font-size:14.5px;margin:0}
+.gloss dt{font-weight:700;font-family:var(--f-recite)}
+.gloss dd{margin:0;color:var(--ink-2)}
+.reads{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.dot{width:16px;height:16px;border-radius:50%;border:2px solid var(--leaf);display:inline-block}
+.dot.on{background:var(--leaf)}
+.pass{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;background:var(--leaf-soft);color:var(--leaf-ink);border-radius:12px;padding:12px 14px}
+.pass b{font-family:var(--f-display);font-weight:400;font-size:22px}
+.miss-msg{background:var(--pen-soft);color:var(--pen);border-radius:12px;padding:10px 14px;font-size:14.5px}
+.frame-t{overflow-x:auto}
+.frame-t table{border-collapse:collapse;min-width:100%;font-size:15px}
+.frame-t th,.frame-t td{border:1px solid var(--line);padding:8px 10px;text-align:left;white-space:nowrap}
+.frame-t thead th{background:var(--sunk);font-size:12.5px;color:var(--ink-2)}
+.frame-t td:first-child{font-weight:700;font-family:var(--f-recite);font-size:17px}
+.fsel{border:1px solid var(--line-2);background:var(--card);border-radius:8px;padding:6px 8px;font-size:15px;max-width:100%}
+.fsel.ok,.inl.ok,.lin.ok{border-color:var(--leaf);background:var(--leaf-soft);color:var(--leaf-ink)}
+.fsel.ng,.inl.ng,.lin.ng{border-color:var(--pen);background:var(--pen-soft);color:var(--pen)}
+.fill{font-family:var(--f-recite);font-size:20px;line-height:2.5;padding:14px 16px;border:1px solid var(--line-2);border-radius:8px;background:var(--card)}
+.fill p{margin:0}
+.inl{display:inline-block;vertical-align:baseline;border:0;border-bottom:2px solid var(--leaf);background:var(--sunk);border-radius:4px 4px 0 0;padding:0 4px;margin:0 2px;font-family:var(--f-recite);font-size:19px;line-height:1.5;text-align:center;min-width:3em}
+.inl:focus{outline:none;background:var(--card);box-shadow:0 0 0 2px var(--leaf)}
+.inl-ans{font-family:var(--f-body);font-size:12.5px;color:var(--pen);font-weight:700;margin:0 4px 0 0}
+.tiles-done{font-family:var(--f-recite);font-size:20px;line-height:2;padding:14px 16px;border:1px dashed var(--line-2);border-radius:8px;min-height:72px;background:var(--card)}
+.tiles-done p{margin:0}
+.tiles-done .tph{color:var(--ink-3);font-family:var(--f-body);font-size:14px}
+.tiles{display:flex;flex-wrap:wrap;gap:8px}
+.tile{border:1px solid var(--line-2);background:var(--card);border-radius:10px;padding:8px 12px;font-family:var(--f-recite);font-size:17px;box-shadow:0 1px 0 var(--line-2)}
+.tile:hover{border-color:var(--leaf)}
+.tile.shake{border-color:var(--pen);color:var(--pen);animation:shake .35s}
+@keyframes shake{20%{transform:translateX(-5px)}40%{transform:translateX(5px)}60%{transform:translateX(-3px)}80%{transform:translateX(3px)}}
+.fl{display:flex;flex-direction:column;gap:4px;padding:10px 0;border-top:1px solid var(--line)}
+.fl:first-child{border-top:0}
+.fl-hint{font-family:var(--f-recite);font-size:18px;color:var(--ink-2);letter-spacing:.02em}
+.lin,.whole{width:100%;border:2px solid var(--line-2);background:var(--sunk);border-radius:10px;padding:10px 12px;font-family:var(--f-recite);font-size:18px;line-height:1.7}
+.lin:focus,.whole:focus{outline:none;border-color:var(--leaf);background:var(--card)}
+.whole{min-height:200px;resize:vertical}
+.diff{font-family:var(--f-recite);font-size:18px;line-height:2;border:1px solid var(--line);border-radius:8px;padding:12px 14px;background:var(--card)}
+.diff-l{font-family:var(--f-body);font-size:12px;font-weight:700;color:var(--ink-3);letter-spacing:.06em;margin:0 0 4px}
+.dmiss{color:var(--pen);background:var(--pen-soft);text-decoration:underline wavy var(--pen);text-underline-offset:4px;border-radius:2px}
+.dext{color:var(--amber);background:var(--wheat-soft);text-decoration:line-through;border-radius:2px}
+.acc{font-family:var(--f-display);font-size:34px;line-height:1;color:var(--leaf-ink)}
+.acc.ng{color:var(--pen)}
+
+/* ---------- records ---------- */
+.rec-head{display:flex;align-items:center;gap:14px}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}
+.kpi span{display:block;font-size:12.5px;color:var(--ink-3);font-weight:700}
+.kpi b{font-family:var(--f-display);font-weight:400;font-size:30px;line-height:1.2;font-variant-numeric:tabular-nums}
+.kpi small{font-size:13px;color:var(--ink-3);margin-left:3px}
+.prog-grid{overflow-x:auto}
+.prog-grid table{border-collapse:collapse;font-size:13px}
+.prog-grid th,.prog-grid td{padding:6px 8px;text-align:center;border-top:1px solid var(--line)}
+.prog-grid th{font-weight:600;color:var(--ink-2);white-space:nowrap}
+.prog-grid td:first-child,.prog-grid th:first-child{text-align:left;font-weight:700;color:var(--ink);white-space:nowrap}
+.pd{display:inline-block;width:14px;height:14px;border-radius:50%;border:2px solid var(--line-2)}
+.pd.on{background:var(--leaf);border-color:var(--leaf)}
+.code{width:100%;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;border:1px solid var(--line-2);border-radius:8px;background:var(--sunk);padding:8px;min-height:72px;resize:vertical;word-break:break-all}
+
+@media (max-width:560px){
+  .hero{grid-template-columns:1fr}
+  .hero-r{max-width:none}
+  .urow{grid-template-columns:1fr}
+  .ur-a{grid-row:auto;grid-column:auto}
+  .ur-a .btn{flex:1}
+  .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .meaning{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .qtext{font-size:17.5px}
+  .rtext{font-size:19px;padding:14px}
+  .fill{font-size:18px;padding:12px}
+  .wlist li{grid-template-columns:auto minmax(0,1fr)}
+  .wlist .wa{grid-column:2;text-align:left}
+  .ph-r{flex-wrap:wrap}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+}
+</style>
+
+<div id="app"></div>
+
+<script>
+(function(){
+'use strict';
+
+/* =========================================================
+   DATA — 4-H 상식 27문항 + 농업상식 98문항 (시군 사전 제공 예상문제)
+   q 문제 / a 정답 / alt 다른 정답 / o 보기 / c 정답 보기 번호(0부터)
+   ox O·X / d 고르기 연습용 오답 보기 / note 참고
+   ========================================================= */
+const H = [
+{q:"회의에서 결정된 사항을 회원에게 알리거나 회의 진행에 지장이 있을 경우 주의를 환기시키기 위해, 전체 회원이 합의된 사실 앞에 승복하겠음을 다짐하는 행위로 이것을 두드리는데요, 이것은 무엇일까요?", a:"의사봉"},
+{q:"4-H회원 연령은 1980년 13세~29세, 2001년 9세~29세, 2011년 9세~34세로 시대에 맞춰 조정되었다. 현재 4-H회원 연령은 만 7세부터 만 몇 세까지인가요?", a:"만 39세", alt:["39","39세","만39"], d:["만 34세","만 35세","만 29세"]},
+{q:"4-H회는 1910년 미국에서 처음 시작되어 우리나라는 해방 후 전국 최초로 경기도에서 시작되었다. 우리나라에서 4-H가 처음 시작된 연도는?", a:"1947년", alt:["1947"], d:["1945년","1950년","1953년"]},
+{q:"광복 후 암울한 현실 속에서 '4-H'의 등장은 희망의 씨앗과도 같았다. 우리나라의 4-H운동은 1947년 경기도를 중심으로 시범 조직·운영되었는데, '4-H구락부'가 처음 조직된 곳은?", a:"화성시", alt:["화성"], d:["수원시","양평군","이천시"]},
+{q:"4-H 관련 제도 정비나 4-H활동에 필요한 예산 및 행정 지원의 역할을 담당하고 있는 중앙기관으로, 농촌 진흥을 위한 시험·연구 및 농업인의 지도·양성과 농촌지도자의 수련에 관한 사무를 관장하는 농림축산식품부 소속 중앙행정기관인 이 기관은?", a:"농촌진흥청", alt:["농진청"]},
+{q:"4-H 발상지 기념탑이 있는 곳은 어디일까요?", a:"경기도농업기술원", alt:["경기농업기술원"], d:["농촌진흥청","국립농업과학원","경기도청"]},
+{q:"각종 4-H행사, 특히 야외교육 행사 때 자신을 태워 어둠을 밝히는 불꽃을 보며 4-H의 정신과 이념을 다시 한 번 생각하고 각오를 새롭게 하는 의식을 무엇이라 부르나요?", a:"봉화식", d:["점화식","선서식","봉송식"]},
+{q:"4-H의 네 가지 이념을 영어로 하면 Head(지육), (　　), Hands(노육), 그리고 Health(체육)이며, 이 이념을 실천하기 위해 조직된 청소년단체가 「4-H회」이다. 괄호 안의 H는 무엇인가요?", a:"Heart(덕육)", alt:["하트"], d:["Hope(희망육)","Home(가정육)","Harmony(화합육)"]},
+{q:"오늘날 4-H의 상징인 이것은 강한 생명력을 갖고 있는 두과식물로 행운과 성취를 상징한다. 이것이 4-H의 상징이 된 것은 1907년 벤슨(Benson)이 미국 아이오와(Iowa) 라이트 지역의 농촌청소년 클럽(Boys' and Girls' Clubs)을 지칭하기 위하여 사용한 것이 시초가 되었다. 이 식물의 이름은?", a:"네잎클로버", alt:["네잎클로바","네잎 클로버"]},
+{q:"4-H운동이 시작된 나라는?", o:["영국","일본","미국","한국"], c:2},
+{q:"이것은 다른 사람에게 어떤 행동을 권유하는 것으로, 회의에 참석한 회원이 일정한 형식을 갖추어 무엇을 어떻게 하자고 제안하는 행위이다. 이것은 무엇인가요?", a:"동의"},
+{q:"제안자 이외의 다른 참가자의 찬성을 의미하는 것으로, 일반적으로 동의는 이것을 받으면 의안으로 성립되는데 이것은 무엇일까요?", a:"재청"},
+{q:"회의를 열 수 있고, 안건을 결정할 수 있는 '일정한 인원수'를 의미하는 이것은 무엇인가요?", a:"정족수"},
+{q:"4-H운동은 세계 2차 대전 이후 전 세계에 전파되었는데, 현재는 몇 개국이 4-H운동에 참여하고 있나요?", a:"75개국", alt:["75","75개"], d:["50개국","60개국","90개국"]},
+{q:"회의 도중 피로하거나 식사 등의 필요가 있을 때 쉬기 위하여, 또는 심한 의견 대립, 장내의 소란 등으로 회의를 일시 정지한 상태를 무엇이라 하나요?", a:"정회"},
+{q:"한국4-H경기도본부가 출범한 해는 몇 년도일까요?", a:"2022년", alt:["2022"], d:["2019년","2020년","2024년"]},
+{q:"4-H경진대회는 4-H회원들의 일 년간의 과제활동에 대해 평가하고, 시상을 함으로써 회원들의 자긍심을 고취하기 위해 개최됩니다. 올해 열리는 경기도 4-H경진대회는 몇 회일까요?", a:"제62회", alt:["62","62회"], d:["제60회","제61회","제63회"]},
+{q:"회의 때 표결의 방법 중 하나로, 어떠한 사안에 대해 모두가 의견이 같은 것을 말하는 표결 방식의 이름은?", a:"만장일치"},
+{q:"회의에서는 어떤 안건을 좋다고 결정(가결)하거나 좋지 않으니 하지 말자고 결정(부결)하기도 한다. 그러나 한번 부결된 내용(안건)은 그 회기 중에 다시 같은 내용으로 제안할 수 없게 하고 있는데, 이 원칙의 이름은?", a:"일사부재리의 원칙", alt:["일사부재리 원칙","일사부재리","일사부재의의 원칙","일사부재의 원칙","일사부재의"], note:"회의 원칙의 정확한 이름은 '일사부재의(一事不再議)의 원칙'이에요. 자료 답안은 '일사부재리'로 적혀 있어서 둘 다 정답으로 인정해요."},
+{q:"대한민국 청소년의 4에이치활동을 지원하여 청소년의 인격을 도야하고 농심을 배양하며 창조적 미래세대로 육성함으로써 국가발전에 이바지함을 목표로 하는 이 법의 이름은 무엇인가요?", a:"한국4에이치활동 지원법", alt:["한국4H활동 지원법","4에이치활동 지원법"], d:["청소년기본법","농촌진흥법","청소년활동 진흥법"]},
+{q:"4-H회의 명칭은 최초 조직 이후 여러 번 변경되었는데, 1978년 박정희 대통령 임기 때 4-H라는 영문 대신 한글 명칭으로 변경하여 부르고자 하여 불렸던 이 명칭은?", a:"새마을청소년회", d:["새마을4-H구락부","4-H구락부","농촌청년회"], note:"명칭 변화: 4-H구락부(1947~1971) → 새마을4-H구락부(1972~1978) → 새마을청소년회(1979~1987) → 4-H회(1988~현재)"},
+{q:"우리나라에서 4-H운동은 구자옥 경기도지사와 미 군정관이었던 이분의 제안으로 경기도에서 '발산농촌청년구락부'가 최초로 조직되면서 시작되었다. 미 군정관인 이분의 이름과 계급은?", a:"엔더슨 대령", alt:["앤더슨 대령"], d:["맥아더 대령","하지 중령","브라운 소령"]},
+{q:"4-H의 H는 Head, Heart, Hands, Health이다.", ox:"O"},
+{q:"4-H는 국제적으로 동일한 철학과 상징을 공유한다.", ox:"O"},
+{q:"4-H 노래 1절의 첫 소절이에요. 「네잎다리 ○○○○ 우리 깃발은」 ○○○○에 들어갈 가사를 쓰시오.", a:"클로바의", alt:["클로버의"]},
+{q:"여러 안건을 한꺼번에 상정하는 것이 아닌, 한 건씩 차례로 회의에 상정하여 다루어야 한다는 이 원칙은 무엇인가요?", a:"1의제의 원칙", alt:["일의제의 원칙","1의제 원칙","일의제 원칙","한 의제의 원칙"]},
+{q:"애국가 가사를 쓰시오. (1~4절 중 무작위 일부 출제)", dyn:true}
+];
+
+const A = [
+{q:"농업인의 긍지와 자부심을 고취시키고 농업의 중요성을 되새기는 날이 '농업인의 날'이다.", ox:"O"},
+{q:"흙을 사용하지 않고 물과 수용성 영양분으로 만든 배양액 속에서 식물을 키우는 방법을 일컫는 말은?", a:"수경재배"},
+{q:"못자리에서 기른 모를 본논에 옮겨 심는 일은?", a:"모내기", alt:["모심기"]},
+{q:"농업을 뜻하는 영어 '애그리컬처(agriculture)'와 '인플레이션(inflation)'의 합성어로, 곡물가격이 상승하는 영향으로 일반 물가가 상승하는 현상은?", a:"애그플레이션(agflation)"},
+{q:"지역주민이 지역자원을 활용한 수익사업을 통해 지역문제를 해결하고, 지역공동체 이익을 효과적으로 실현하기 위해 설립한 기업은?", a:"마을기업"},
+{q:"공동의 경제적·사회적·문화적 필요와 욕구를 충족시키고자 하는 사람들이 자발적으로 결성한 자율적인 조직은?", a:"협동조합"},
+{q:"일을 하다가 잠시 쉬는 사이 먹는 음식을 새참이라고 한다. 여기서 새참의 우리말은?", a:"곁두리"},
+{q:"고추의 일종으로 우리나라에서는 피망을 개량한 것을 이것이라 부르는데, 한국원예학회에서 발간한 용어집에서는 이들 모두를 단고추로 분류하고 있다. 단맛을 가지고 있으며 감귤보다 비타민 C가 더 많아 최근 샐러드용으로 많이 이용되는 이것은 무엇일까요?", a:"파프리카"},
+{q:"지난 가을에 수확한 양식은 바닥이 나고 보리는 미처 여물지 않은 5~6월, 농가생활에 식량 사정이 매우 어려운 고비를 말하며 춘궁기, 맥령기라고도 불린 이것은?", a:"보릿고개"},
+{q:"새나 짐승으로부터 받는 농작물의 피해를 막기 위하여 막대기와 짚 등으로 사람의 형상을 만들고 삿갓·모자 등을 씌워서 만든 물건은?", a:"허수아비"},
+{q:"과거 우리나라에 만우절과 흡사하게 거짓말을 할 수 있었던 날이 있었다. '이 날'은 뭐라고 불렸을까?", o:["소금 들어오는 날","첫눈 오는 날","백합꽃 떨어지는 날"], c:1},
+{q:"화학비료와 농약을 사용하지 않고 농사를 짓는 것을 말하며, 유기질 비료를 사용하고 오리와 우렁이, 참게 등을 이용해 해충과 잡초를 제거하며 이들이 배설한 배설물을 비료로 이용하는 자연 친화적인 농법은?", a:"친환경 농법", alt:["친환경농업"]},
+{q:"미식가의 '미'는 한자로 어떻게 쓸까?", o:["쌀 미(米)","맛 미(味)","아름다울 미(美)"], c:2},
+{q:"'여름지기'는 '농부'의 옛말이다.", ox:"O"},
+{q:"수선화과 채소작물로 중앙아시아가 원산지로 알려진 작물이며, 우리나라에는 조선시대 말엽에 도입된 것으로 추정하고 있다. 매운맛과 특이한 향기가 있어서 주요 양념채소로 많이 소비되고 있는 이 작물은?", a:"양파"},
+{q:"소액을 장기적으로 투자해 노후자금을 마련하는 것으로, 커피 한 잔 값만 아껴도 든든한 노후자금을 마련할 수 있다는 이 효과는 무엇일까?", a:"카페라테 효과", alt:["카페라떼 효과","라테 효과","라떼 효과"]},
+{q:"농산물의 생산, 수확 후 관리 및 유통의 각 단계에서 작물이 재배되는 농경지 및 농업용수 등의 농업환경과 농산물에 잔류할 수 있는 농약, 중금속, 잔류성 유기오염물질 또는 유해생물 등의 위해요소를 적절하게 관리하는 인증제도는?", a:"농산물우수관리(GAP) 인증제도", alt:["농산물우수관리 인증","GAP 인증","농산물우수관리","GAP 인증제도"]},
+{q:"24절기 중 마지막 절기이며, 풍속에서는 이날 밤을 해넘이라 하여 콩을 방이나 마루에 뿌려 악귀를 쫓고 새해를 맞는 풍습이 있다. 이 절기는?", a:"대한"},
+{q:"농촌 고령화에 따른 인력난 해소와 농업 생산성 향상을 위해 정보통신기술(ICT)을 온실, 축사, 기타 농업시설에 적용하여, 시간과 공간의 제약 없이 생육환경을 최적 상태로 관리할 수 있는 농업 형태는?", a:"스마트팜", alt:["스마트 팜"]},
+{q:"다음 조선 후기의 소설 중 한글 소설이 아닌 것은?", o:["홍길동전","허생전","춘향전"], c:1},
+{q:"'초를 친다'라고 말할 때 '초'는 식초를 뜻한다.", ox:"O"},
+{q:"배추, 양배추, 양상추와 같이 잎이 서로를 감싸면서 자라며, 속이 차는 형태를 의미하는 이 말은?", a:"결구"},
+{q:"이 기술은 특정 작물에 없는 유전자를 인위적으로 결합시켜 새로운 특성의 품종을 개발하는 유전자 재조합기술(Biotechnology)로, 미국 몬산토사가 1995년 이 기술을 도입한 콩을 상품화하면서 대중에게 알려지기 시작했다. 이 기술을 활용한 농산물을 무엇이라 하나요?", a:"GMO(유전자 변형 농산물)", alt:["유전자 조작 농산물","유전자변형농산물"]},
+{q:"농업을 뜻하는 '애그리컬처(agriculture)'와 '비즈니스(business)'의 합성어로, 이전의 개인 중심의 작은 농사가 아닌 농산물 생산을 포함하여 생산된 농산물의 가공과 유통, 수출입은 물론 비료, 농약, 농기계, 사료, 종자 등 농자재 산업까지 포함한 농업 관련 산업의 총체를 말하는 이 용어는 무엇일까요?", a:"애그리비즈니스(agribusiness)"},
+{q:"남부지방의 파프리카, 피망, 고추 등에 발생하여 예방 및 철저한 방제가 필요한 병이다. 진딧물에 의해 영속전염을 하고 고추, 무, 배추, 시금치 등 150여 종의 식물을 가해하며, 병에 걸리면 초장이 짧아지고 엽맥이 황화되며 열매가 적게 달려 수량이 감소한다. 초기에는 증상이 오이모자이크바이러스(CMV)와 매우 유사하므로 반드시 정밀진단이 필요하다. 매개충인 진딧물 방제를 철저히 하면서 잡초 등 중간기주를 제거하고, 병든 포기는 조기에 제거해야 하는 이 병은 무엇인가?", o:["사탕무우황화바이러스병","딸기세균모무늬병","토마토시들음병","단감 둥근무늬낙엽병"], c:0},
+{q:"몸과 땅은 둘이 아닌 하나라는 뜻으로, 자기가 태어난 땅에서 나온 먹거리가 자신의 몸에 더 잘 맞는다는 의미의 이 용어는?", a:"신토불이"},
+{q:"조선시대에는 남자가 여자에게 사랑의 징표로 '이것'을 주는 풍속이 있었다. 신체의 일부인 이것은 무엇일까?", a:"치아", alt:["이","이빨"]},
+{q:"이 지표는 한 나라의 총 식량 소비량 중 어느 정도가 국내 생산으로 공급되는가를 나타내는 지표이다. 계산식은 국내생산량 ÷ (국내생산량 + 순수입량) × 100이다. 이것은 무엇일까요?", a:"식량자급률"},
+{q:"외부환경의 영향을 받지 않는 곳에서 농산물을 생산하는 시설로, 빛, 공기, 온도, 습도, 양분 등을 모두 계획적·인위적으로 조절하는 이것은 무엇인가요?", a:"식물공장"},
+{q:"벼를 재배하는 방법의 하나로, 못자리에서 모를 키운 후 그 모를 본답으로 옮겨 심는 재배방법이다. 노동력이 절약되면서 더 많은 수확을 올릴 수 있어 확대되기 시작했다. 이모작이 가능하고 쌀 종자를 절약할 수 있는 이 재배법의 이름은?", a:"이앙법"},
+{q:"식품과 기술의 합성어로, 식품산업과 관련 산업에 인공지능, 사물인터넷, 빅데이터 등을 접목시켜 신시장을 개척하는 이 기술은 무엇인가요?", a:"푸드테크(Food-tech)"},
+{q:"미국의 영양학 박사 스티븐 프랫이 세계적인 장수 지역인 그리스와 오키나와의 식단에 공통적으로 등장하는 먹을거리를 선정해 섭취를 권장한 건강식품이다. 우리 인체에 필요한 각종 영양소가 풍부하고 나쁜 콜레스테롤은 함유하고 있지 않으며, 음식 첨가물의 독성을 해독하고 면역력을 증가시켜 노화를 늦춰주는 식품으로, 대부분 저칼로리라는 점이 특징인 이것은 무엇인가?", o:["서울푸드","롯데푸드","슈퍼푸드","로컬푸드"], c:2},
+{q:"품종보호를 위한 정부 간 기구로서, 1961년 식물의 신품종 보호에 관한 국제조약이 채택된 후 1968년 식물품종 육성자의 권리를 가맹 각국이 보장하자는 것을 기본원칙으로 창설되었다. 식물신품종 보호기간은 20년 이상(다년생 작물은 25년)이며, 품종명칭도 '상표권'처럼 배타적으로 보장되고 로열티를 받을 수 있게 한 농업 관련 국제기구는 무엇일까?", o:["국제연합식량기구(FAO)","국제농업개발기금(IFAD)","세계식량계획(WFP)","국제식물신품종보호동맹(UPOV)"], c:3},
+{q:"제주 서귀포 지역에서 새롭게 재배되는 신품종의 고급 감귤로, 당도가 높고 과즙이 매우 풍부하며 은은한 향을 느낄 수 있다. 타원형의 껍질은 얇고 육질은 아주 부드러워서 입에 넣으면 사르르 녹는 맛이 있다. 카로티노이드 성분이 함유되어 있어 뛰어난 항산화 효과가 있는 것으로 알려져 있으며, 알칼리 식품으로 신진대사를 원활히 하고 피부와 점막을 튼튼히 하여 감기 예방에도 효과가 있는 이 작물은 무엇인가?", o:["한라봉","레드향","천혜향","황금향"], c:2},
+{q:"강수량은 일정 시간 내에 수평한 지표면에 떨어져 유출되지 않고 고인 물의 깊이를 측정한 것입니다. 호우주의보는 12시간 동안의 강수량이 110mm 이상인 경우를 가리킵니다. 그렇다면 호우경보는 12시간 동안 강수량이 몇 mm 이상 예상되는 경우를 말할까요?", o:["120mm","140mm","160mm","180mm"], c:3},
+{q:"단단한 땅을 파기 쉽도록 쇠붙이의 머리 부분이 황새의 부리처럼 길고 좁게 생긴 이 농기구의 이름은?", a:"곡괭이"},
+{q:"감의 떫은맛은 감 속의 이 성분 때문인데, 이 성분은 수용성이기 때문에 쉽게 떫은맛을 나타낸다. 이 성분의 이름은 무엇인가요?", a:"타닌", alt:["탄닌"]},
+{q:"벼를 최초로 재배하기 시작한 시기는 언제인가요?", o:["구석기","신석기","청동기","철기"], c:3, note:"자료 답안은 '철기'예요. 교과서에서는 보통 벼농사가 청동기 시대에 시작됐다고 배우니, 대회 기준 답을 선생님께 한 번 더 확인해요."},
+{q:"우리에게 친숙한 가죽 타악기의 하나로, 양편 머리가 크고 그 허리가 가늘다 하여 '세요고'라고도 불리는 이 악기는 무엇일까요?", a:"장구", alt:["장고"]},
+{q:"인구 증가, 각종 재난, 전쟁과 같은 특수한 상황에 대비하여 국가가 적정 식량을 유지하는 것을 말하는 이것은 무엇일까요?", a:"식량안보"},
+{q:"이 협정을 체결한 국가 간에 상품·서비스 교역에 대한 관세 및 무역장벽을 철폐함으로써 배타적인 무역특혜를 서로 부여하는 이 협정은 무엇인가요?", a:"자유무역협정(FTA)"},
+{q:"친환경 농산물 중 하나로, 농약을 전혀 사용하지 않고 화학비료를 권장량의 3분의 1 이하로 사용해 재배한 농산물은?", a:"무농약 농산물", alt:["무농약"]},
+{q:"농업 관련 분야를 제외한 지난달 고용 인구수의 변화를 나타낸 지표로, 이 지수는?", a:"비농업 고용지수", alt:["비농업부문 고용지수","비농업고용"], note:"고용지수에서 농축산업을 빼는 이유: 계절의 영향을 많이 받는 직군이기 때문이에요."},
+{q:"식물에서 나온 씨 또는 씨앗을 의미하며, 버섯 종균, 묘목, 포자, 영양체인 잎, 줄기, 뿌리 등을 통틀어 이르는 이 말은?", a:"종자"},
+{q:"지표면을 덮고 자라서 토양의 유실, 열방사, 건조, 모래의 비산을 방지하는 동시에 미관상 아름다움을 유지하는 식물을 말하며, 잔디, 조릿대, 아이비, 꽃잔디 등이 이 식물에 해당합니다. 이 식물은?", a:"지피식물"},
+{q:"산성, 알칼리성을 나타내는 이 수치는 7이 중성으로, 이하가 산성, 이상이 알칼리성을 의미한다. 이 수치는?", a:"pH", alt:["피에이치","페하","수소이온농도"]},
+{q:"평야지의 여름은 25℃ 이상으로 올라가는 날이 많아 저온성 채소의 재배가 어렵다. 그래서 표고 600m 이상인 지역에서 평지에 비해 낮은 온도를 이용하여 작물을 재배하는 것을 무엇이라 하는가?", a:"고랭지 재배", alt:["고랭지 농업","고랭지"]},
+{q:"농업은 천하의 사람들이 살아가는 큰 근본이라는 뜻으로, 농업을 장려하는 이 말은?", a:"농자천하지대본(農者天下之大本)"},
+{q:"옥상, 베란다, 골목길 등 자투리 공간을 활용한 여가 또는 체험적인 농사로, 농촌에서 생계와 판매를 목적으로 하는 것과는 구별되는 이 농업은 무엇인가요?", a:"도시농업"},
+{q:"2006년 영국의회 과학기술처(POST)에서 처음 사용한 용어로, 사람의 활동이나 상품을 생산 및 소비하는 전 과정을 통해 직접적 또는 간접적으로 배출되는 온실가스 배출량을 이산화탄소로 환산한 총량을 의미하는 이 용어는?", a:"탄소발자국(carbon footprint)"},
+{q:"토양을 파쇄하고 속과 겉의 흙을 섞어주는 작업을 무엇이라 하나요?", a:"경운"},
+{q:"농지법에 따라 농지를 효율적으로 이용하고 보전하기 위해 시·도지사가 지정·고시하는 이 지역은?", a:"농업진흥지역"},
+{q:"딸기는 과일과 채소 중 어디에 속할까요?", o:["과일","채소"], c:1},
+{q:"같은 작물을 한곳에서 계속 재배하면서 생기는 장애현상을 무엇이라 하나요?", a:"연작장해", alt:["연작장애","이어짓기 장해"]},
+{q:"수선화과 채소작물로 중앙아시아가 원산지로 알려진 작물입니다. 우리나라에는 조선시대 말엽에 도입된 것으로 추정하고 있습니다. 매운맛과 특이한 향기가 있어서 주요 양념채소로 많이 소비되고 있는 이 작물은 무엇일까요?", o:["고추","마","생강","양파"], c:3, note:"농업상식 15번과 같은 내용이에요."},
+{q:"이 작물은 칼륨과 비타민C 함량이 높아 껍질을 제거하고 생과일로 먹거나 주스로 만들어 마실 수 있다. 한방에서는 과체라 하여 이뇨작용에 좋은 약으로 사용하기도 하며, 수분이 많아 갈증이 심한 여름 과일로 제격이다. 다양한 비타민과 무기질이 풍부해 피로를 회복시켜주고 간을 보호해 황달 치료에 사용되기도 한다. 또한 항균작용을 하기 때문에 식사 후 후식으로 먹으면 식중독을 예방할 수 있다는데, 이것은 어떤 작물인지요?", o:["복숭아","참외","살구","토마토"], c:1},
+{q:"주로 산지에서 자라며 서늘한 고산지대에 자생하는 산나물로, 파종한 후 수확하기까지 3~4년이 걸리는 작물이고 오랜 기다림만큼 깊은 맛이 인상적이다. 생으로 먹거나 구워 먹기도 하는 이것은 알리신 성분이 많고 느끼함을 잡아주어 돼지고기와 함께 먹으면 좋다. 돼지고기에 풍부한 비타민 B1이 잘 흡수될 수 있도록 돕기도 한다. 또한 각종 항산화물질이 들어 있어 체내의 산화활동을 억제하고 노화를 예방하는 효능이 있는 이 작물은?", o:["양파","아스파라거스","양배추","산마늘"], c:3},
+{q:"이것의 주성분은 과당과 포도당 같은 당 성분이며, 이 밖에 수크로오스, 말토오스, 덱스트린 등을 포함하여 옛날부터 건강과 미용에 효용이 있다고 했다. 비타민 B군이 많아서 피부가 거칠어지는 것을 막는 효과가 있고, 밀원(蜜源)에 따라 성분의 차이가 있는데 메밀, 참피나무, 밤나무 등의 짙은 색에는 철분이 많다. 꽃의 당분은 대부분 수크로오스이지만 분비액 중 효소인 인버타아제(invertase)에 의해서 설탕이 전화당으로 변화되어 흡수되기 쉬운 좋은 당질 식품인 이것은 무엇인가?", o:["조청","산초","벌꿀","과당"], c:2},
+{q:"이것은 마천루, 수직농장(Vertical Farm), 빌딩농장 등으로 불리며, 태양광을 이용하는 형태와 태양광을 완전히 차단한 시설 내에서 형광등, LED 등 인공광을 이용하는 형태가 있다. 복합환경조절 시스템을 갖추어 어떠한 환경조건에서도 생산이 가능하기 때문에 전 세계적으로 이용 가능성이 높다. 국립원예특작과학원에서는 이것을 이용하여 쌈채소 중 소비가 많은 청경채와 적겨자를 생산하는 기술을 개발하는 등 활용가치가 큰 이것은 무엇인가요?", o:["식물공장","버섯공장","수평농장","시설육묘장"], c:0, note:"농업상식 29번과 같은 답이에요."},
+{q:"톡톡 터지는 알갱이로 씹는 맛을 느낄 수 있는 이것은 껍질이 선명한 녹색이고 수염이 갈색인 특징이 있다. 이 작물은 식이섬유가 많고 지방 함량이 적어 변비를 예방하고, 수염은 보통 차로 끓여 마시며 이뇨 효과를 낸다. 또한 트립토판이라는 성분이 많이 함유되어 비장을 튼튼하게 하고 위장을 편하게 하는 진정효과가 있으며, 씨눈에는 토코페롤이라 불리는 비타민 E 성분이 많아 피부 노화와 건조를 막는 이 작물은 무엇인가?", o:["조","수수","옥수수","메밀"], c:2},
+{q:"콩, 우유와 거의 대등하게 단백질 함량이 높아 '식물성 쇠고기'라고 불리며, 20여 가지의 아미노산, 그중에서 라이신, 트립토판 등 9가지의 필수아미노산을 골고루 함유하고 있다. 반면 지방 함량은 1~8%로 낮은 데다 불포화지방산으로 구성돼 있어 다이어트 식품으로도 적격이다. 티아민, 리보플라빈, 니아신, 비오틴, 비타민A 등 각종 비타민과 함께 칼슘, 칼륨, 인 등 많은 미네랄 영양소를 함유하고 있는 현대인의 대표적인 웰빙식품인 이것은 무엇인가?", o:["매실","오미자","딸기","버섯"], c:3},
+{q:"90% 이상이 수분으로 그만큼 칼로리가 낮아 100g당 14kcal밖에 되지 않기 때문에 각종 성인병의 원인이 되는 비만을 예방하고 다이어트에 효과적이며, '펙틴'이라는 섬유질 성분이 많다. 또한 칼슘, 인, 철, 아연, 칼륨 등 각종 미네랄은 물론 비타민 A, B1, B6, C, E, 나이아신, 엽산 등 비타민이 다양하게 함유되어 피부 미용과 면역력 향상에 효과적이다. 이외에도 구연산, 사과산, 호박산, 아미노산, 루틴, 단백질, 당질, 회분, 식이섬유 등이 골고루 들어 있어 영양소가 총집합되어 있는 이 작물은 무엇인가?", o:["토마토","오이","딸기","수박"], c:0},
+{q:"달콤하고 아삭하며 여름철 과일로 사랑받고 있다. 수분과 당분이 주성분이고 알칼리성 식품으로 면역력을 키워주며 식욕을 돋운다. 특히 발육 불량과 야맹증에 좋으며 장을 부드럽게 하여 변비를 없애고 어혈을 풀어 준다. 껍질은 해독작용을 하며 타타르산·사과산·시트르산 등의 유기산은 니코틴을 제거하고 독성을 없애 주기도 한다. 발암물질인 나이트로소아민의 생성을 억제하는 성분도 들어 있다. 단, 장어와 같이 먹으면 설사를 하고, 자라와 먹으면 가슴 통증을 일으키므로 주의해야 하는 이 작물은 무엇인가?", o:["매실","멜론","복숭아","자두"], c:2},
+{q:"좋은 기름은 뚜껑을 열었을 때 진하고 고소한 향이 풍부해야 하고, 투명하면서 밝은 갈색의 황금빛을 띠어야 좋은 것이다. 이것에는 리놀레산, 리놀렌산 등 불포화지방산이 함유되어 건강과 미용에 뛰어난 효과가 있으며, 혈중 콜레스테롤 수치를 떨어뜨리고 혈관에 탄력을 주어 혈관이 경직되는 것을 막고 동맥경화 예방에 도움을 준다. 하지만 칼로리가 높으므로 적당량을 섭취하도록 해야 하는 이것은 무엇인가?", o:["참기름","콩기름","해바라기기름","들깨기름"], c:0},
+{q:"농촌마을이 가지고 있는 모든 인적·물적 자원을 학교 교육과 연계하여 정기적으로 학교 현장체험학습 및 교육 체험 활동을 제공하는 다원적 공간을 말한다. 이곳을 통해 농업인의 자긍심을 높이고 농촌의 교육적 가치와 다원적 가치를 확대하며, 농가소득 및 지역 활력 증대에 기여하는 데에 목적을 둔 이 사업은?", o:["팜스테이","농촌농장","에듀팜","현장교육장"], c:2},
+{q:"흔히 신선이 타고 다니는 새로 알려져 있고 천 년을 장수하는 영물로 인식되어 우리 일상생활에 매우 친숙하게 등장한다. 몸길이는 140cm에 달하고, 이마에서 눈앞, 턱밑, 멱, 앞목, 목옆 및 뒷목에 걸친 부분은 흑색이며, 머리 꼭대기는 붉은 피부가 드러나 있고 눈 뒤에서 뒷머리는 백색이며 몸통도 백색이다. 고고한 기상은 선비의 이상적인 성품을 상징하여 왔으며, 장수를 상징하는 대표적 존재로 인식되어 온 동물은?", o:["두루미","학","황새","백로"], c:1, note:"두루미와 학은 같은 새를 부르는 이름이지만, 자료 답안은 '학'이에요."},
+{q:"생산자와 소비자 사이의 이동거리를 단축시켜 식품의 신선도를 극대화하자는 취지로 출발한 이 운동은, 먹을거리에 대한 생산자와 소비자 사이의 이동거리를 최대한 줄임으로써 농민과 소비자에게 이익이 돌아가도록 하는 운동이다. 이것은 무엇일까요?", a:"로컬푸드 운동", alt:["로컬푸드"]},
+{q:"이 과일에 있는 피토케미컬 성분은 항산화 효과가 뛰어나 암 예방에 으뜸이다. 혈압 상승의 주범인 나트륨을 몸 밖으로 내보내 성인병을 예방하는 역할을 한다. 또 식이섬유가 풍부해 조금만 먹어도 포만감을 느낄 수 있어 다이어트에 효과적이고, 몸 안의 독소를 내보내 피부를 맑게 해준다. 특히 아침에 먹는 이것은 금(金)이라고도 하며, 식물성 성분이 많아 위액 분비를 활성화해 소화 흡수를 돕기 때문에 많이 애용하는 이 과일은 무엇인가?", o:["사과","자두","토마토","딸기"], c:0},
+{q:"주로 고산지대에서 많이 생산되는 이것은 향과 맛이 진한 것이 특징으로 인삼, 도라지와 비슷하고, 입맛을 회복시켜주는 건강 음식이다. 특히 식이섬유질이 풍부하여 포만감을 주므로 다이어트에 도움을 주며, 사포닌이라는 물질 때문에 원기회복, 혈액순환, 가래 해소에도 효과적인 이 식물은 무엇인지요?", o:["고사리","더덕","당귀","산삼"], c:1},
+{q:"우리 조상들의 단백질 공급 식품이었던 이것은 우리나라 대표 발효식품이다. 이것에 들어 있는 납두균, 레시틴 등의 성분이 뇌를 건강하게 하고, 섬유질이 풍부해 변비 예방에도 효과적이다. 한편 염분이 많아 다이어트 때는 주의하여 섭취해야 하고, 특히 항암작용이 우수하다고 알려져 세계에서도 그 우수성을 인정받고 있는 이것은 무엇인가?", o:["간장","고추장","매실장","된장"], c:3, note:"자료에는 번호가 80번으로 잘못 적혀 있어요. 순서상 70번이에요."},
+{q:"이 작물의 기름에 들어 있는 알파리놀렌산이 오메가3 지방산으로, 이에 대한 기능성이 알려지면서 수요가 점점 증가하고 있다. 재배면적은 2013년 3만ha에서 2014년 3만 7000ha로 1년 사이 약 20% 늘어났고, 가격 역시 5년 사이 두 배로 뛰어올라 새로운 소득 작물로 급부상 중이다. 누구나 쉽게 재배할 수 있는 이 작물은 무엇인가?", o:["참깨","유지박","산초","들깨"], c:3},
+{q:"이 말은 '음식과 약의 기원이 같다'는 뜻이다. 전통의학에서는 매일 섭취하는 음식이 건강 유지에 중요하다고 여겼다. 최근에는 농작물의 기능성이 과학적으로 입증되면서 의약품이 아닌 음식으로 건강을 챙기려는 소비자가 늘고 있다. 말 그대로 '음식이 보약'이라는 뜻의 이 말은 무엇인가?", o:["신토불이","명약관화","약식동원","식이요법"], c:2},
+{q:"노화방지 효능이 있는 안토시아닌과 비타민이 풍부해 최근 인기가 높아진 이 열매는, 뿌리부터 잎까지 버릴 것이 하나 없이 전부 약이 된다고 하는 뽕나무의 열매이기도 하다. 이 열매의 이름은 무엇인가?", o:["오미자","오디","구기자","여주"], c:1},
+{q:"윷놀이를 척사 또는 사희라고도 한다. 삼국시대 이전부터 전해오는 한국 고유의 민속놀이로 대개 정월 초하루부터 보름날까지 즐기며, 부여족 시대에 5가지 가축을 5부락에 나누어주고 그 가축들을 경쟁적으로 번식시킬 목적에서 비롯된 놀이라고 한다. 그에 연유하여 '도'는 돼지, '개'는 개, '걸'은 ○, '윷'은 소, '모'는 말에 비유한다. 그러면 걸은 어떤 가축인가?", o:["닭","오리","돼지","양"], c:3},
+{q:"이것에 들어 있는 피토케미컬 성분은 항산화 효과가 뛰어나 암 예방에 으뜸이다. 혈압 상승의 주범인 나트륨을 몸 밖으로 내보내 성인병을 예방하며, 식이섬유가 풍부해 조금만 먹어도 포만감을 느낄 수 있어 다이어트에 효과적이고, 몸 안의 독소를 내보내 피부를 맑게 해준다. 특히 아침에 먹는 이것은 금(金)이라고도 한다. 식물성 성분이 많아 위액 분비를 활성화해 소화 흡수를 돕기 때문인데, 이것은 무엇인가?", o:["배","사과","딸기","복숭아"], c:1, note:"농업상식 68번과 같은 내용이에요."},
+{q:"24절기 중 마지막 절기이며 음력 12월 중기(中氣)이다. 가장 추운 때라는 뜻이지만 실제로는 아니며, 겨울을 매듭짓는 날로 보고 이날의 마지막 날을 절분이라 하여 계절적으로 연말일(年末日)로 여겼다. 풍속에서는 이날 밤을 해넘이라 하여 콩을 방이나 마루에 뿌려 악귀를 쫓고 새해를 맞는 풍습이 있다. 무슨 절기인가?", o:["동지","소한","대한","우수"], c:2, note:"농업상식 18번과 같은 답이에요."},
+{q:"이것에 함유된 사포닌, 파이탁신, 제니스테인 등의 성분이 항암작용을 하여 암 예방에 도움이 된다. 비타민E 성분은 항산화작용으로 노화방지에 좋으며, 유산균과 섬유질이 풍부해서 변비 및 장 건강에 좋다. 뼈에 좋은 칼슘이 풍부하고 칼슘 흡수를 도와주는 제니스테인과 비타민K 성분이 많아 골다공증 예방 및 어린이 성장발육에도 도움을 주며, 손상된 간 기능을 회복시키는 효능이 뛰어나다. 섬유질은 당이 체내에 흡수되는 속도를 늦춰주고 트립신은 췌장에 작용해 인슐린 분비를 촉진해 당뇨 개선에도 좋다고 하며, 일본에서는 낫또라고 하는 이것은 무엇인가?", o:["더덕","청국장","순두부","김치"], c:1},
+{q:"식물의 줄기와 잎 등을 그대로 토양의 거름으로 사용하기 위해서 가꾸는 작물로, 양분공급의 역할뿐만 아니라 토양피복, 염류제거, 토양개량 등 다양한 역할을 하는 이것은 무슨 작물일까요?", o:["약용작물","콩과작물","특용작물","녹비작물"], c:3},
+{q:"농산물의 생산, 수확 후 관리 및 유통의 각 단계에서 작물이 재배되는 농경지 및 농업용수 등의 농업환경과 농산물에 잔류할 수 있는 농약, 중금속, 잔류성 유기오염물질 또는 유해생물 등의 위해요소를 적절하게 관리하는 인증제도는 무엇인가?", o:["유기농산물인증","무농약농산물인증","농산물우수관리(GAP)인증","친환경농산물인증"], c:2, note:"농업상식 17번과 같은 내용이에요."},
+{q:"미국 시사주간지 타임(Time)이 선정한 '세계 10대 건강식품'에 속할 만큼 우리 몸에 이로운 식품으로, 항산화작용을 하고 혈전 형성을 막아주며 콜레스테롤과 혈당을 낮추는 효과 등이 있다. 주요 성분으로 카페인, 탄닌, 테아닌 등이 있고, 첫 번째로 따는 잎으로 만드는 것을 우전이라고 하는 이것은 무엇인가?", o:["커피","녹차","우롱차","허브차"], c:1},
+{q:"이것은 농촌 고령화에 따른 인력난 해소와 농업 생산성 향상을 위해 정보통신기술(ICT)을 온실, 축사, 기타 농업시설에 적용하여 시간과 공간의 제약 없이 생육환경을 최적 상태로 관리할 수 있는 농업 형태를 말한다. 최근 정부에서는 한국형 이것의 보급 확산을 위해 농림축산식품부 주관 지원 사업을 다방면에서 추진하고 있다. 이것은 무엇인가?", o:["농업표준화","스마트팜","팜파티","농촌교육농장"], c:1, note:"농업상식 19번과 같은 내용이에요."},
+{q:"여름이 제철인 포도를 잘 고르는 방법은 껍질 색이 (①짙고) 표면에 하얀 가루가 묻어 (②있지 않으며), 알이 굵고 송이가 (③적당한) 것을 골라야 한다. 또한 포도송이의 단맛은 꼭지 부분인 위쪽이 가장 (④달고) 아래쪽으로 내려갈수록 (⑤신맛)이 강하기 때문에, 시식이 가능하다면 아래쪽을 먹어보고 구매하는 것이 좋다. 위 설명 중 괄호 속 내용이 올바르지 못한 것은 몇 번인가?", o:["① 짙고","② 있지 않으며","③ 적당한","④ 달고","⑤ 신맛"], c:1},
+{q:"비닐하우스를 이용한 겨울철 시설재배가 보편화되면서 한겨울에도 먹을 수 있게 된 이것은, 예전에는 '장희' 등 일본 품종이 주를 이루었다. 하지만 최근에는 '금실', '홍실'과 같이 맛과 품질이 우수한 국산 품종이 속속 개발·보급되면서 국산 품종 보급률이 높아지고 있다. 이것은 무엇인가?", o:["고추","딸기","사과","파프리카"], c:1},
+{q:"음력 3월에 드는 24절기 중의 하나로, 논밭의 흙을 고르는 가래질을 이 무렵부터 시작한다고 한다. '한식' 하루 전날이거나 같은 날일 수도 있으며 본격적인 봄이 시작됨을 알리는 날이기도 하다. '하늘이 차츰 맑아진다'는 뜻을 가진 이 날은 무엇인가?", o:["청명","입춘","단오","춘분"], c:0},
+{q:"벼 생산비와 노동력을 줄일 수 있는 재배기술로서 1990년대 중반 확대 보급됐다가 문제점이 많아 2013년까지 급격히 줄었다. 그러나 기술개선에 힘입어 경남 기준 2016년 3,600ha, 올해는 4,000ha에서 이용될 것으로 예상되는 벼 재배기술은 무엇인가?", o:["이앙재배","온실재배","촉성재배","직파재배"], c:3},
+{q:"식용과 사료용으로 널리 재배되며, 이것의 수염에는 이뇨효과가 있어 건강음료로도 출시되어 판매되고 있다. 최근 농촌진흥청 연구팀이 이것의 수염 속에 든 항산화 성분이 자외선 차단에 효과적이어서 피부를 보호하는 역할도 한다는 결과를 내놓기도 했다. 지방에 따라 강냉이, 옥시기 등 여러 가지 이름으로 불리는 이 작물은 무엇인가?", o:["알팔파","귀리","옥수수","청보리"], c:2, note:"농업상식 60번과 같은 답이에요."},
+{q:"벼는 이삭이 패는 시기에 물을 말려야 한다.", ox:"O", note:"자료 답안은 O예요. 다만 이삭이 팰 무렵에는 물이 많이 필요하다는 설명도 흔하니, 대회 기준 답을 선생님께 한 번 더 확인해요."},
+{q:"다음 중 두류 작물에 해당하는 것은?", o:["배추","콩","감자","옥수수"], c:1},
+{q:"작물의 뿌리는 광합성을 한다.", ox:"X"},
+{q:"귀농은 농업 외 활동을 병행할 수 없다.", ox:"X"},
+{q:"영리기업과 비영리기업의 중간 형태로 사회적 목적을 우선적으로 추구하면서 영업활동을 수행하는 기업을 사회적 기업이라고 한다. 그러면 사회적 문제를 해결할 기술혁신 아이디어를 상업화하기 위해 설립된 기업은 무엇이라고 하나요?", a:"소셜벤처", alt:["소셜 벤처"]},
+{q:"이것은 메꽃과로서 다른 작물이 자랄 수 없는 토양에서 재배할 수 있고 재해에도 강하며 수확량도 많은 것이 특성이다. 원산지는 중미의 유카탄반도와 남미 베네수엘라 오리노코강 지역으로, 15세기 말경 콜럼버스에 의해 유럽과 스페인을 거쳐 다시 희망봉, 인도양을 거쳐 동양으로 전파됐다. 우리나라에는 1763년 일본에 조선통신정사로 간 조엄이 쓰시마에서 들여온 것으로 알려진 이 작물은?", a:"고구마"},
+{q:"평야지의 여름은 25℃ 이상으로 올라가는 날이 많아 저온성 채소의 재배가 어렵다. 그래서 표고 600m 이상인 지역에서 평지에 비해 낮은 온도를 이용하여 작물을 재배하는 것을 무엇이라 하는가?", a:"고랭지 재배", alt:["고랭지 농업","고랭지"], note:"농업상식 47번과 같은 문제예요."},
+{q:"가축의 식도 내에서 사료의 이동은 어떤 운동에 의해 이동하는가?", a:"연동운동", alt:["연동 운동"]},
+{q:"이것은 아랍어로 '허용된 것'이라는 뜻을 갖고 있으며, 이슬람교도인 무슬림이 먹고 쓸 수 있는 제품을 총칭한다. 육류 중에는 이슬람식으로 알라의 이름으로 도살된 고기, 이를 원료로 한 화장품 등이 이 제품에 해당한다. 이것은 무엇인가요?", a:"할랄"},
+{q:"농장 및 농촌경관을 활용하여 정신적·육체적 건강을 회복하기 위해 제공되는 모든 농업활동과 산업을 의미하는 농업은?", a:"치유농업"},
+{q:"유통경로 투명화를 위해 가축의 출생부터 사육, 도축, 포장처리, 판매에 이르기까지 모든 단계에서 정보를 기록 및 관리하는 제도로, 2008년 국내산 쇠고기를 시작으로 2010년 수입 쇠고기, 2014년 국내산 돼지고기로 적용이 확대됐다. 이 제도의 이름은?", a:"HACCP(해썹)", alt:["축산물 이력제","쇠고기 이력제","이력제","축산물이력추적제"], note:"설명 내용은 '축산물 이력제'에 해당해요. 자료 답안은 'HACCP(해썹)'이라서 둘 다 정답으로 인정해요. 대회 기준 답을 선생님께 확인해요."},
+{q:"GATT(관세 및 무역에 관한 일반협정) 체제의 문제점을 해결하고 다자간 무역기구로 발전시키려는 국가 간 협상을 의미하는 이 용어는?", a:"우루과이 라운드", alt:["UR"]}
+];
+
+/* ---------- 외우기 글: 4-H 서약 / 애국가 ([ ] = 핵심어) ---------- */
+const PLEDGE = {
+  id:'pledge', name:'4-H 서약',
+  sub:'4-H 행사 때 다 함께 외치는 서약이에요. 일곱 단계를 차례로 통과하면 통째로 외워져요.',
+  sections:[{key:'all', label:'서약 전문', lines:[
+    "나는 [4-H회]와 [사회]와 [우리 나라]를 위하여",
+    "나의 [머리](智)는 더욱 [명석하게] [생각하며],",
+    "나의 [마음](德)은 더욱 [크게] [충성하며],",
+    "나의 [손](勞)은 더욱 [위대하게] [봉사하며],",
+    "나의 [건강](體)은 더욱 [좋은 생활]을 하기로 [맹세함]."
+  ]}],
+  frames:[
+    {title:'누구를 위하여?', cols:['순서','대상'], rows:[['첫째','4-H회'],['둘째','사회'],['셋째','우리 나라']]},
+    {title:'지·덕·노·체 짝 맞추기', cols:['나의','한자','더욱 어떻게','무엇을'], rows:[
+      ['머리','智','명석하게','생각하며'],['마음','德','크게','충성하며'],['손','勞','위대하게','봉사하며'],['건강','體','좋은','생활을 하기로 맹세함']]}
+  ]
+};
+const ANTHEM = {
+  id:'anthem', name:'애국가',
+  sub:'1절부터 4절, 그리고 후렴까지. 절마다 단계를 통과해요. 뼈대 잡기는 한 번만 하면 돼요.',
+  sections:[
+    {key:'v1', label:'1절', lines:["[동해] 물과 [백두산]이 마르고 [닳도록]","하느님이 [보우하사] 우리나라 [만세]"]},
+    {key:'v2', label:'2절', lines:["[남산] 위에 저 [소나무] [철갑]을 두른 듯","바람 서리 [불변함]은 우리 [기상]일세"]},
+    {key:'v3', label:'3절', lines:["가을 하늘 [공활한데] 높고 [구름] 없이","[밝은 달]은 우리 가슴 [일편단심]일세"]},
+    {key:'v4', label:'4절', lines:["이 [기상]과 이 [맘]으로 [충성]을 다하여","[괴로우나] [즐거우나] 나라 [사랑하세]"]},
+    {key:'ch', label:'후렴', lines:["[무궁화] 삼천리 [화려 강산]","[대한] 사람 대한으로 길이 [보전하세]"]}
+  ],
+  frames:[
+    {title:'절마다 첫 소절과 끝 소절', cols:['절','첫 소절','끝 소절'], rows:[
+      ['1절','동해 물과 백두산이','우리나라 만세'],['2절','남산 위에 저 소나무','우리 기상일세'],['3절','가을 하늘 공활한데','일편단심일세'],['4절','이 기상과 이 맘으로','나라 사랑하세'],['후렴','무궁화 삼천리','길이 보전하세']]}
+  ],
+  gloss:{
+    v1:[['보우하사','보살피고 도와주시어']],
+    v2:[['철갑','쇠로 만든 갑옷'],['불변함','변하지 않음']],
+    v3:[['공활한데','텅 비어 넓은데'],['일편단심','한 조각 붉은 마음, 끝까지 변하지 않는 마음']],
+    v4:[['이 기상과 이 맘','1~3절에서 노래한 씩씩한 기운과 마음']],
+    ch:[['삼천리','우리 국토 전체'],['보전하세','잘 지켜 나가세']]
+  }
+};
+const TEXTS = {pledge:PLEDGE, anthem:ANTHEM};
+const STAGES = [
+  {n:1,key:'read', name:'읽기',     hint:'소리 내어 또박또박 세 번 읽어요. 노란 밑줄이 핵심어예요.'},
+  {n:2,key:'frame',name:'뼈대 잡기', hint:'순서와 짝을 먼저 잡아 두면 줄이 저절로 떠올라요.'},
+  {n:3,key:'order',name:'순서 맞추기',hint:'흩어진 조각을 처음부터 차례대로 눌러요. 실수 2번까지 통과.'},
+  {n:4,key:'key',  name:'핵심어 빈칸',hint:'중요한 낱말만 비어 있어요. 빈칸을 채우고 채점해요.'},
+  {n:5,key:'half', name:'절반 빈칸', hint:'한 어절씩 건너 비어 있어요. 띄어쓰기는 채점하지 않아요.'},
+  {n:6,key:'first',name:'첫 글자만', hint:'어절마다 첫 글자만 보여요. 한 줄씩 통째로 써요.'},
+  {n:7,key:'whole',name:'통째로 쓰기',hint:'아무 힌트 없이 전부 써요. 띄어쓰기·문장부호·한자는 채점하지 않아요.'}
+];
+const STG = Object.fromEntries(STAGES.map(s=>[s.key,s]));
+
+const UNITS = [
+  {id:1, cat:'h', from:1,  to:27, title:'4-H 상식',   range:'1~27번'},
+  {id:2, cat:'a', from:1,  to:25, title:'농업상식 ①', range:'1~25번'},
+  {id:3, cat:'a', from:26, to:50, title:'농업상식 ②', range:'26~50번'},
+  {id:4, cat:'a', from:51, to:75, title:'농업상식 ③', range:'51~75번'},
+  {id:5, cat:'a', from:76, to:98, title:'농업상식 ④', range:'76~98번'}
+];
+const LEARNERS = [
+  {name:'버미', init:'버', color:'var(--leaf)'},
+  {name:'밍키', init:'밍', color:'var(--amber)'},
+  {name:'서누', init:'서', color:'var(--sky)'}
+];
+const MODE_LABEL = {card:'카드로 떠올리기', mc:'골라서 맞히기', type:'써서 맞히기'};
+const MODE_DESC = {
+  card:'문제를 보고 머릿속으로 답을 떠올린 뒤 정답을 확인해요. 가장 빠르게 많이 돌릴 수 있어요.',
+  mc:'보기 가운데서 골라요. 처음 익힐 때 좋아요. 이 방법으로는 두 잎까지만 자라요.',
+  type:'답을 직접 써요. 대회처럼 정확하게 외웠는지 확인할 때 좋아요.'
+};
+const LV_LABEL = ['새 문제','한 잎','두 잎','세 잎','네잎 완성'];
+const CAT_NAME = {h:'4-H 상식', a:'농업상식'};
+
+/* =========================================================
+   UTIL
+   ========================================================= */
+const $ = (s,el=document)=>el.querySelector(s);
+const esc = s => String(s==null?'':s).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const rand = n => Math.floor(Math.random()*n);
+const pick = a => a[rand(a.length)];
+const shuf = a => { for(let i=a.length-1;i>0;i--){ const j=rand(i+1); [a[i],a[j]]=[a[j],a[i]]; } return a; };
+const clean = s => String(s==null?'':s).normalize('NFC').toLowerCase().replace(/[\s·•.,'"“”‘’`~\-_/:;!?「」『』<>\[\]{}()（）　]/g,'');
+const rnorm = s => String(s==null?'':s).normalize('NFC').replace(/\([^)]*\)/g,'').toLowerCase().replace(/[\s.,'"“”‘’·\-!?]/g,'');
+const isScored = c => !/[\s.,'"“”‘’·\-!?()（）]/.test(c);
+function accSet(list){
+  const set = new Set();
+  list.forEach(a=>{
+    a = String(a);
+    set.add(clean(a));
+    set.add(clean(a.replace(/\([^)]*\)/g,'')));
+    [...a.matchAll(/\(([^)]*)\)/g)].forEach(m=>set.add(clean(m[1])));
+  });
+  set.delete('');
+  return set;
+}
+function lev(a,b){
+  if(Math.abs(a.length-b.length)>1) return 9;
+  const m=a.length,n=b.length; let prev=Array.from({length:n+1},(_,j)=>j);
+  for(let i=1;i<=m;i++){ const cur=[i]; for(let j=1;j<=n;j++){ cur[j]=Math.min(prev[j]+1,cur[j-1]+1,prev[j-1]+(a[i-1]===b[j-1]?0:1)); } prev=cur; }
+  return prev[n];
+}
+const fmtTime = s => { s=Math.max(0,Math.round(s)); const m=Math.floor(s/60), x=s%60; return `${String(m).padStart(2,'0')}:${String(x).padStart(2,'0')}`; };
+const fmtDate = t => { const d=new Date(t); return `${d.getMonth()+1}/${d.getDate()} ${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}`; };
+const dayKey = t => { const d=new Date(t); return `${d.getFullYear()}-${d.getMonth()+1}-${d.getDate()}`; };
+const qhtml = s => esc(s).replace(/\n/g,'<br>');
+const fmtR = s => esc(s).replace(/\(([智德勞體])\)/g,'<span class="hj">($1)</span>');
+
+/* =========================================================
+   BUILD QUESTIONS
+   ========================================================= */
+const QS = [], QMAP = {};
+function build(list, cat){
+  list.forEach((r,i)=>{
+    const n=i+1;
+    const o={id:cat+n, cat, n, q:r.q, note:r.note||'', d:r.d||null};
+    if(r.dyn){ o.type='dyn'; o.a='애국가 가사(무작위 빈칸)'; }
+    else if(r.o){ o.type='mc'; o.o=r.o; o.c=r.c; o.a=r.o[r.c]; }
+    else if(r.ox){ o.type='ox'; o.a=r.ox; }
+    else { o.type='short'; o.a=r.a; o.acc=accSet([r.a].concat(r.alt||[])); }
+    o.unit = UNITS.find(u=>u.cat===cat && n>=u.from && n<=u.to).id;
+    QS.push(o); QMAP[o.id]=o;
+  });
+}
+build(H,'h'); build(A,'a');
+const unitIds = u => QS.filter(q=>q.unit===u).map(q=>q.id);
+
+/* ---------- recite text helpers ---------- */
+const plainLine = l => l.replace(/[\[\]]/g,'');
+function segs(l){ const out=[]; const re=/\[([^\]]+)\]/g; let last=0,m; while((m=re.exec(l))){ if(m.index>last) out.push({k:false,s:l.slice(last,m.index)}); out.push({k:true,s:m[1]}); last=re.lastIndex; } if(last<l.length) out.push({k:false,s:l.slice(last)}); return out; }
+const keysOf = l => segs(l).filter(s=>s.k).map(s=>s.s);
+const secOf = (tid,key) => TEXTS[tid].sections.find(s=>s.key===key);
+function chunksOf(sec){ const out=[]; sec.lines.forEach((ln,li)=>{ const t=plainLine(ln).split(/\s+/); for(let i=0;i<t.length;i+=2) out.push({t:t.slice(i,i+2).join(' '), li}); }); return out; }
+const ALL_ANTHEM_KEYS = [...new Set(ANTHEM.sections.flatMap(s=>s.lines.flatMap(keysOf)))];
+
+/* 4-H 상식 27번: 애국가 무작위 빈칸 */
+function genAnthemQ(){
+  const sec=pick(ANTHEM.sections); const line=pick(sec.lines); const k=pick(keysOf(line));
+  let used=false;
+  const disp=line.replace(/\[([^\]]+)\]/g,(m,x)=>{ if(!used && x===k){ used=true; return '(　　　)'; } return x; });
+  return {type:'short', q:`애국가 가사의 빈칸을 채우세요. (${sec.label})\n「${disp}」`, a:k, acc:accSet([k]), anthem:true};
+}
+function distractors(q, base, n){
+  if(base.anthem) return shuf(ALL_ANTHEM_KEYS.filter(x=>clean(x)!==clean(base.a))).slice(0,n);
+  if(q.d) return q.d.slice(0,n);
+  const seen=new Set([clean(base.a)]); const pool=[];
+  shuf(QS.filter(x=>x.cat===q.cat && x.type==='short')).forEach(x=>{ const c=clean(x.a); if(!seen.has(c)){ seen.add(c); pool.push(x.a); } });
+  return pool.slice(0,n);
+}
+function makeInst(q, mode){
+  let base;
+  if(q.type==='dyn') base=genAnthemQ();
+  else base={type:q.type, q:q.q, a:q.a, acc:q.acc, o:q.o, c:q.c};
+  if(base.type==='short' && mode==='mc'){
+    const opts=shuf([base.a].concat(distractors(q, base, 3)));
+    return Object.assign({}, base, {type:'mc', o:opts, c:opts.indexOf(base.a), fromShort:true});
+  }
+  return base;
+}
+function judge(inst, v){
+  if(inst.type==='short') return v!=null && inst.acc.has(clean(v));
+  if(inst.type==='mc') return v===inst.c;
+  if(inst.type==='ox') return v===inst.a;
+  return false;
+}
+function nearMiss(inst, v){
+  const c=clean(v); if(!c) return false;
+  for(const a of inst.acc){ if(a.length>=3 && lev(a,c)===1) return true; }
+  return false;
+}
+
+/* =========================================================
+   STORAGE (이 기기 브라우저에 학습자별로 저장)
+   ========================================================= */
+const KEY='fourh-amgi-v1';
+let DB={learners:{}, last:null}; let canStore=true;
+try{ const raw=localStorage.getItem(KEY); if(raw){ const p=JSON.parse(raw); if(p && p.learners) DB=p; } }catch(e){ canStore=false; }
+function save(){ try{ localStorage.setItem(KEY, JSON.stringify(DB)); canStore=true; }catch(e){ canStore=false; } }
+function LF(name){ if(!DB.learners[name]) DB.learners[name]={q:{},hist:[],rec:{}}; const r=DB.learners[name]; r.q=r.q||{}; r.hist=r.hist||[]; r.rec=r.rec||{}; return r; }
+const L = () => LF(S.who);
+const qrec = id => { const Q=L().q; return Q[id]||(Q[id]={lv:0,ok:0,ng:0,last:0}); };
+const lvOf = (id, rec) => ((rec||L()).q[id]||{}).lv||0;
+function trimHist(){ const h=L().hist; if(h.length>300) h.length=300; }
+function levelUp(before, mode, q){
+  if(mode==='mc' && (q.type==='short'||q.type==='dyn')) return before<2 ? before+1 : before;
+  return Math.min(4, before+1);
+}
+function applyLevel(id, ok, mode){
+  const r=qrec(id), before=r.lv, q=QMAP[id];
+  if(ok){ r.ok++; r.lv=levelUp(before, mode, q); } else { r.ng++; r.lv=Math.max(0, before-2); }
+  r.last=Date.now();
+  return {before, after:r.lv};
+}
+function srec(tid, sec, stage){ const R=L().rec; R[tid]=R[tid]||{}; R[tid][sec]=R[tid][sec]||{}; return R[tid][sec][stage]||(R[tid][sec][stage]={done:false,best:0,tries:0,reads:0}); }
+function srecGet(rec, tid, sec, stage){ return (((rec.rec[tid]||{})[sec]||{})[stage])||{}; }
+function secProg(rec, tid, key){ let d=0, t=0; STAGES.forEach(st=>{ if(st.key==='frame') return; t++; if(srecGet(rec,tid,key,st.key).done) d++; }); return {done:d,total:t}; }
+function textProg(rec, tid){ const T=TEXTS[tid]; let d=srecGet(rec,tid,'_frame','frame').done?1:0, t=1; T.sections.forEach(s=>{ const p=secProg(rec,tid,s.key); d+=p.done; t+=p.total; }); return {done:d,total:t}; }
+function counts(ids, rec){ const c=[0,0,0,0,0]; ids.forEach(id=>c[lvOf(id,rec)]++); return c; }
+function bestTest(rec, unit){ const t=rec.hist.filter(h=>h.k==='test' && h.unit===unit); return t.length ? Math.max(...t.map(h=>h.score)) : null; }
+function weakIds(n){
+  const Q=L().q;
+  const list=QS.filter(q=>(Q[q.id]?Q[q.id].lv:0)<4).sort((x,y)=>{ const a=Q[x.id]||{}, b=Q[y.id]||{}; return (a.lv||0)-(b.lv||0) || (b.ng||0)-(a.ng||0) || (a.last||0)-(b.last||0); });
+  if(list.length) return list.slice(0,n).map(q=>q.id);
+  return QS.slice().sort((x,y)=>(Q[x.id].last||0)-(Q[y.id].last||0)).slice(0,n).map(q=>q.id);
+}
+function wrongIds(rec){ const Q=(rec||L()).q; return QS.filter(q=>Q[q.id] && Q[q.id].ng>0 && Q[q.id].lv<4).sort((x,y)=>Q[y.id].ng-Q[x.id].ng).map(q=>q.id); }
+
+/* =========================================================
+   STATE
+   ========================================================= */
+const S = {
+  who: (DB.last && DB.learners[DB.last]) ? DB.last : null,
+  tab:'study', studyView:'home', examView:'home',
+  mode:'card', shuffle:false, examShuffle:false,
+  rnd:{count:20, range:'all'},
+  drill:null, exam:null, listUnit:1, hideAns:true,
+  rv:{pledge:{sec:'all',stage:'read'}, anthem:{sec:'v1',stage:'read'}},
+  work:null, resetAsk:false, restoreText:'', restoreMsg:''
+};
+try{ const p=JSON.parse(localStorage.getItem(KEY+'-ui')||'{}'); if(p.mode) S.mode=p.mode; if(typeof p.shuffle==='boolean') S.shuffle=p.shuffle; }catch(e){}
+function saveUI(){ try{ localStorage.setItem(KEY+'-ui', JSON.stringify({mode:S.mode, shuffle:S.shuffle})); }catch(e){} }
+
+/* =========================================================
+   SMALL VIEWS
+   ========================================================= */
+const LEAF='M0 0C-5.2-1.6-7.6-6.6-4.6-9.6C-2.6-11.4-0.4-10.6 0-8.4C0.4-10.6 2.6-11.4 4.6-9.6C7.6-6.6 5.2-1.6 0 0Z';
+function clover(lv, size, cls){ return `<svg class="clv ${cls||''}" width="${size}" height="${size}" viewBox="-12 -12 24 24" aria-hidden="true">${[0,90,180,270].map((r,i)=>`<path d="${LEAF}" transform="rotate(${r})" class="lf${i<lv?' on':''}"/>`).join('')}</svg>`; }
+function mbar(c){ const tot=c.reduce((a,b)=>a+b,0)||1; return `<div class="mbar" role="img" aria-label="네잎 ${c[4]}개, 세 잎 ${c[3]}개, 두 잎 ${c[2]}개, 한 잎 ${c[1]}개, 새 문제 ${c[0]}개">${[0,1,2,3,4].map(l=>c[l]?`<i class="m${l}" style="width:${(c[l]/tot*100).toFixed(2)}%"></i>`:'').join('')}</div>`; }
+const legend = () => `<p class="legend">${[0,1,2,3,4].map(l=>`<span><i style="background:var(--m${l})"></i>${LV_LABEL[l]}</span>`).join('')}</p>`;
+const shortQ = q => { const t=q.q.replace(/\n/g,' '); return t.length>58 ? t.slice(0,56)+'…' : t; };
+const ansText = q => q.type==='dyn' ? '애국가 탭에서 연습해요' : q.a;
+const learnerOf = n => LEARNERS.find(x=>x.name===n);
+let flashTimer=null;
+function flash(msg){ let el=$('#flash'); if(!el){ el=document.createElement('div'); el.id='flash'; el.className='flash'; el.setAttribute('role','status'); document.body.appendChild(el); } el.textContent=msg; el.hidden=false; clearTimeout(flashTimer); flashTimer=setTimeout(()=>{ el.hidden=true; },2200); }
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+function header(){
+  const Lr = S.who ? learnerOf(S.who) : null;
+  const tabs=[['study','암기'],['exam','시험'],['pledge','서약'],['anthem','애국가'],['records','기록']];
+  return `<header class="top"><div class="top-in">
+    <div class="brand">${clover(4,24,'brand-c')}<span>4-H 경진대회 암기장</span></div>
+    ${Lr?`<button class="who" data-act="switch"><span class="av sm" style="--c:${Lr.color}">${Lr.init}</span><span>${Lr.name}</span><span class="who-x">바꾸기</span></button>`:''}
+  </div>
+  ${Lr?`<nav class="tabs-in" role="tablist" aria-label="메뉴">${tabs.map(([k,l])=>`<button role="tab" aria-selected="${S.tab===k}" class="tab${S.tab===k?' on':''}" data-act="tab" data-tab="${k}">${l}</button>`).join('')}</nav>`:''}
+  </header>`;
+}
+
+/* =========================================================
+   PICK LEARNER
+   ========================================================= */
+function renderPick(){
+  const all=QS.map(q=>q.id);
+  return `<section>
+    <h1 class="h1">누가 공부할까요?</h1>
+    <p class="sub">자기 이름을 누르면 자기 기록으로 들어가요. 125문제가 모두 네잎이 되면 자동으로 튀어나올 만큼 외운 거예요.</p>
+    ${canStore?'':`<p class="store-warn">이 브라우저에서는 기록이 저장되지 않아요. 시크릿 창이 아닌 일반 창으로 열어 주세요.</p>`}
+    <div class="pick-grid">${LEARNERS.map(p=>{
+      const r=LF(p.name); const c=counts(all,r); const tests=r.hist.filter(h=>h.k==='test'); const pp=textProg(r,'pledge'), ap=textProg(r,'anthem');
+      return `<button class="pcard" data-act="choose" data-who="${p.name}">
+        <span class="pcard-h"><span class="av" style="--c:${p.color}">${p.init}</span><span class="pname">${p.name}</span></span>
+        ${mbar(c)}
+        <span class="pstats">
+          <span>네잎 완성<b>${c[4]} / ${all.length}</b></span>
+          <span>최근 시험<b>${tests.length?tests[0].score+'점':'—'}</b></span>
+          <span>4-H 서약<b>${pp.done} / ${pp.total}</b></span>
+          <span>애국가<b>${ap.done} / ${ap.total}</b></span>
+        </span>
+      </button>`; }).join('')}</div>
+    <p class="tiny">기록은 지금 쓰는 기기의 브라우저에 저장돼요. 다른 기기로 옮기거나 선생님께 보낼 때는 '기록' 탭의 기록 코드를 쓰세요.</p>
+  </section>`;
+}
+
+/* =========================================================
+   STUDY HOME
+   ========================================================= */
+function renderStudy(){
+  const all=QS.map(q=>q.id), c=counts(all), wr=wrongIds();
+  const units=UNITS.map(u=>{ const ids=unitIds(u.id), uc=counts(ids); return `<li class="urow">
+      <div class="ur-t"><span class="un">${u.id}단원</span><b>${u.title}</b><span class="ur">${u.range} · ${ids.length}문제</span></div>
+      <div class="ur-bar">${mbar(uc)}<span class="ur-n">네잎 ${uc[4]}/${ids.length}</span></div>
+      <div class="ur-a"><button class="btn sm" data-act="list" data-u="${u.id}">목록</button><button class="btn primary sm" data-act="drillUnit" data-u="${u.id}">외우기</button></div>
+    </li>`; }).join('');
+  return `
+  <section class="panel hero">
+    <div class="hero-l">
+      <p class="eyebrow">${esc(S.who)}의 네잎 밭</p>
+      <p class="big"><b>${c[4]}</b><span>/ ${all.length}문제 네잎 완성</span></p>
+      ${mbar(c)}${legend()}
+    </div>
+    <div class="hero-r">
+      <button class="btn primary lg" data-act="drillWeak">약한 문제 20개 외우기</button>
+      <p class="tiny">잎이 적고 자주 틀린 문제부터 골라 줘요.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="h2">외우는 방법</h2>
+    <div class="seg" role="radiogroup" aria-label="외우는 방법">${['card','mc','type'].map(m=>`<button role="radio" aria-checked="${S.mode===m}" class="${S.mode===m?'on':''}" data-act="mode" data-mode="${m}">${MODE_LABEL[m]}</button>`).join('')}</div>
+    <p class="mode-desc">${MODE_DESC[S.mode]}</p>
+    <div class="ladder">
+      <span>${clover(1,18)} 처음 나왔을 때 맞히면 잎이 하나 자라요</span>
+      <span>${clover(2,18)} 틀리면 두 잎이 떨어져요</span>
+      <span>${clover(4,18)} 네 번 따로 맞히면 네잎 완성</span>
+    </div>
+    <p class="tiny">한 번 외우기를 시작하면, 처음에 틀린 문제는 두 번 연달아 맞힐 때까지 계속 다시 나와요.</p>
+    <label class="tog" style="margin-top:10px"><input type="checkbox" id="shuf" data-act="shuffle" ${S.shuffle?'checked':''}> 문제 순서 섞기</label>
+  </section>
+
+  <section>
+    <h2 class="h2">단원별로 외우기</h2>
+    <ul class="units">${units}
+      <li class="urow alt">
+        <div class="ur-t"><span class="un">오답</span><b>오답 노트</b><span class="ur">틀린 적 있고 아직 네잎이 아닌 문제</span></div>
+        <div class="ur-bar"><span class="ur-n">${wr.length}문제</span></div>
+        <div class="ur-a"><button class="btn primary sm" data-act="drillWrong" ${wr.length?'':'disabled'}>외우기</button></div>
+      </li>
+      <li class="urow alt">
+        <div class="ur-t"><span class="un">전체</span><b>125문제 한 번에</b><span class="ur">섞어서 나와요</span></div>
+        <div class="ur-bar"><span class="ur-n">시간이 꽤 걸려요</span></div>
+        <div class="ur-a"><button class="btn sm" data-act="drillAll">외우기</button></div>
+      </li>
+    </ul>
+  </section>`;
+}
+
+function renderList(){
+  const u=UNITS.find(x=>x.id===S.listUnit), ids=unitIds(u.id);
+  return `<div class="ptop"><button class="btn ghost sm" data-act="listBack">← 암기 홈</button>
+      <label class="tog"><input type="checkbox" id="hideAns" data-act="hideAns" ${S.hideAns?'checked':''}> 정답 가리기</label></div>
+    <div><h1 class="h1">${u.id}단원 · ${u.title} <small>${u.range}</small></h1><p class="sub">문제와 답을 훑어보는 목록이에요. 정답 칸을 누르면 하나씩 보여요.</p></div>
+    <ol class="qtable">${ids.map(id=>{ const q=QMAP[id]; return `<li>
+      <div class="qt-h"><span class="qno">${q.n}</span>${clover(lvOf(id),18)}</div>
+      <div class="qt-b"><p>${q.type==='ox'?'<span class="tchip">O/X</span> ':''}${qhtml(q.q)}${q.type==='mc'?`<span class="qt-o">${q.o.map((o,i)=>`${i+1}) ${esc(o)}`).join(' · ')}</span>`:''}</p>
+        <button class="qt-a${S.hideAns?' hid':''}" data-act="peek">${esc(ansText(q))}</button>
+        ${q.note && !S.hideAns?`<p class="note">${esc(q.note)}</p>`:''}</div></li>`; }).join('')}</ol>
+    <div class="row"><button class="btn primary lg" data-act="drillUnit" data-u="${u.id}">이 단원 외우기 시작</button></div>`;
+}
+
+/* =========================================================
+   DRILL
+   ========================================================= */
+function startDrill(ids, title){
+  if(!ids.length){ flash('외울 문제가 없어요'); return; }
+  const order = S.shuffle ? shuf(ids.slice()) : ids.slice();
+  S.drill={title, mode:S.mode, allIds:ids.slice(), total:order.length, queue:order, st:{}, done:0, cur:null, phase:'ask', inst:null, firstOk:0, firstNg:[], last:null, t0:0, logged:false};
+  nextCard();
+  S.tab='study'; S.studyView='drill'; render(); window.scrollTo(0,0);
+}
+function nextCard(){
+  const d=S.drill;
+  if(!d.queue.length){ d.phase='end'; d.cur=null; logDrill(false); return; }
+  d.cur=d.queue.shift(); d.inst=makeInst(QMAP[d.cur], d.mode); d.phase='ask'; d.t0=Date.now();
+}
+function logDrill(partial){
+  const d=S.drill; if(!d || d.logged) return;
+  const answered=Object.values(d.st).filter(s=>s.first!==null).length; if(!answered) return;
+  d.logged=true;
+  L().hist.unshift({t:Date.now(), k:'drill', title:d.title+(partial?' (중간에 멈춤)':''), n:answered, ok:d.firstOk, mode:d.mode}); trimHist(); save();
+}
+function answerDrill(ok, given){
+  const d=S.drill, id=d.cur; if(!id || d.phase!=='ask' && d.phase!=='reveal') return;
+  const s=d.st[id]||(d.st[id]={streak:0, first:null});
+  const prevStreak=s.streak, wasFirst=s.first===null; const lvBefore=lvOf(id); let lvAfter=lvBefore;
+  if(wasFirst){ s.first=ok; lvAfter=applyLevel(id, ok, d.mode).after; if(ok) d.firstOk++; else d.firstNg.push(id); }
+  s.streak = ok ? s.streak+1 : 0;
+  const need = s.first ? 1 : 2, finished = s.streak>=need;
+  if(finished) d.done++;
+  else { const pos = ok ? Math.min(d.queue.length, 4+rand(3)) : Math.min(d.queue.length, 2+rand(3)); d.queue.splice(pos,0,id); }
+  d.last={id, ok, given, secs:(Date.now()-d.t0)/1000, finished, need, streak:s.streak, wasFirst, lvBefore, lvAfter, prevStreak, inst:d.inst};
+  save();
+  if(d.mode==='card') nextCard(); else d.phase='feedback';
+  render();
+}
+function acceptDrill(){
+  const d=S.drill, x=d && d.last; if(!x || x.ok) return;
+  const id=x.id, s=d.st[id], r=qrec(id);
+  if(x.wasFirst){ r.ng=Math.max(0,r.ng-1); r.ok++; r.lv=levelUp(x.lvBefore, d.mode, QMAP[id]); s.first=true; d.firstOk++; d.firstNg=d.firstNg.filter(v=>v!==id); x.lvAfter=r.lv; }
+  s.streak=x.prevStreak+1;
+  const qi=d.queue.indexOf(id); if(qi>=0) d.queue.splice(qi,1);
+  const need=s.first?1:2;
+  if(s.streak>=need){ d.done++; x.finished=true; } else { d.queue.splice(Math.min(d.queue.length,4+rand(3)),0,id); x.finished=false; }
+  x.ok=true; x.accepted=true; save(); render();
+}
+function typeChip(inst){ return `<span class="tchip">${inst.type==='ox'?'O/X':inst.type==='mc'?(inst.fromShort?'고르기':'객관식'):'단답형'}</span>`; }
+function optsHtml(inst, chosen, done){
+  if(inst.type==='ox') return `<div class="oxs">${['O','X'].map(v=>{ let cls='opt ox'; if(done){ if(v===inst.a) cls+=' right'; else if(v===chosen) cls+=' wrong'; } return `<button class="${cls}" data-act="dox" data-v="${v}" ${done?'disabled':''} aria-label="${v==='O'?'맞다 O':'틀리다 X'}">${v}</button>`; }).join('')}</div>`;
+  return `<div class="opts">${inst.o.map((o,i)=>{ let cls='opt'; if(done){ if(i===inst.c) cls+=' right'; else if(i===chosen) cls+=' wrong'; } return `<button class="${cls}" data-act="dopt" data-i="${i}" ${done?'disabled':''}><span class="opt-n">${i+1}</span><span>${esc(o)}</span></button>`; }).join('')}</div>`;
+}
+function renderDrill(){
+  const d=S.drill, pct=Math.round(d.done/d.total*100);
+  const top=`<div class="dtop"><button class="btn ghost sm" data-act="quitDrill">그만하기</button>
+    <div class="dprog"><div class="dprog-t"><b>${esc(d.title)}</b><span class="num">${MODE_LABEL[d.mode]} · 통과 ${d.done}/${d.total}</span></div><div class="pbar"><i style="width:${pct}%"></i></div></div></div>`;
+  if(d.phase==='end') return top + renderDrillEnd();
+  const q=QMAP[d.cur], inst=d.inst, st=d.st[d.cur], lv=lvOf(q.id);
+  const again = st && st.first===false;
+  let h=`<article class="qcard" aria-live="polite">
+    <div class="qmeta"><span class="qno">${CAT_NAME[q.cat]} ${q.n}번</span>${typeChip(inst)}<span class="qlv">${clover(lv,22)}<span>${LV_LABEL[lv]}</span></span></div>`;
+  if(d.mode==='card' && d.last && d.phase==='ask'){ const x=d.last; h+=`<p class="lastres ${x.ok?'ok':'ng'}">방금 문제: ${x.ok?'알았어요':'몰랐어요 · 정답 '+esc(x.inst.type==='mc'?x.inst.o[x.inst.c]:x.inst.a)}</p>`; }
+  if(again && d.phase!=='feedback') h+=`<p class="again">다시 나온 문제예요. 두 번 연달아 맞히면 통과해요.${st.streak?` (지금 ${st.streak}번 맞힘)`:''}</p>`;
+  h+=`<p class="qtext">${qhtml(inst.q)}</p>`;
+
+  if(d.mode==='card'){
+    if(inst.type==='mc') h+=`<ol class="olist">${inst.o.map(o=>`<li>${esc(o)}</li>`).join('')}</ol>`;
+    if(d.phase==='ask'){
+      h+=`<div class="dact"><button class="btn primary lg" data-act="reveal" id="dReveal">정답 확인</button></div><p class="tiny">답을 소리 내어 말해 보고 눌러요. 키보드는 스페이스.</p>`;
+    } else {
+      h+=`<div class="ans"><span>정답</span><b>${esc(inst.type==='mc'?inst.o[inst.c]:inst.a)}</b></div>${q.note?`<p class="note">${esc(q.note)}</p>`:''}
+        <div class="dact"><button class="btn primary lg" data-act="self" data-ok="1">알았어요</button><button class="btn lg warn" data-act="self" data-ok="0">몰랐어요</button></div><p class="tiny">키보드 1 = 알았어요, 2 = 몰랐어요</p>`;
+    }
+  } else if(d.phase==='ask'){
+    if(inst.type==='short'){
+      h+=`<div class="ain"><input id="dIn" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="답을 쓰고 Enter" aria-label="답 쓰기">
+        <button class="btn primary" data-act="dsubmit">제출</button><button class="btn ghost" data-act="giveup">모르겠어요</button></div>`;
+    } else h+=optsHtml(inst, null, false);
+  } else {
+    const x=d.last;
+    if(inst.type!=='short') h+=optsHtml(inst, x.given, true);
+    const right = inst.type==='mc'?inst.o[inst.c]:inst.a;
+    h+=`<div class="fb ${x.ok?'ok':'ng'}">
+      <span class="fb-h">${x.ok?(x.accepted?'인정! 맞힌 걸로 할게요':'정답!'):'아쉬워요'}</span>
+      ${inst.type==='short'&&!x.ok?`<p class="mine">내 답: ${x.given?esc(x.given):'(모르겠어요)'}${nearMiss(inst,x.given)?' · 한 글자만 달라요':''}</p>`:''}
+      ${!x.ok?`<p>정답: <b>${esc(right)}</b></p>`:(inst.type==='short'&&clean(x.given)!==clean(right)?`<p>정답 표기: <b>${esc(right)}</b></p>`:'')}
+      <p>${x.finished?'이 문제는 통과했어요.':(x.ok?'한 번 더 맞히면 통과해요.':'조금 뒤에 다시 나와요.')}${x.ok?` · ${x.secs.toFixed(1)}초`:''}</p>
+      ${x.wasFirst&&x.lvBefore!==x.lvAfter?`<span class="lvchg">${clover(x.lvBefore,18)} ${LV_LABEL[x.lvBefore]} → ${clover(x.lvAfter,18)} ${LV_LABEL[x.lvAfter]}</span>`:''}
+    </div>${q.note?`<p class="note">${esc(q.note)}</p>`:''}
+    <div class="dact"><button class="btn primary lg" data-act="next" id="dNext">다음 문제</button>${inst.type==='short'&&!x.ok&&x.given?`<button class="btn" data-act="accept">내 답도 맞아요</button>`:''}</div>`;
+  }
+  h+=`</article>`;
+  return top+h;
+}
+function renderDrillEnd(){
+  const d=S.drill, ng=d.firstNg;
+  return `<section class="panel">
+    <h2 class="h2">${esc(d.title)} 통과!</h2>
+    <p class="big"><b>${d.firstOk}</b><span>/ ${d.total}문제를 처음에 바로 맞혔어요</span></p>
+    ${ng.length?`<h3 class="h3">처음에 틀렸던 문제 ${ng.length}개</h3><ul class="wlist">${ng.map(id=>{ const q=QMAP[id]; return `<li><span class="qno">${q.cat==='h'?'4-H':'농업'} ${q.n}</span><span class="wq">${esc(shortQ(q))}</span><b class="wa">${esc(ansText(q))}</b></li>`; }).join('')}</ul>`:`<p>모두 첫 번에 맞혔어요.</p>`}
+    <div class="dact">${ng.length?`<button class="btn primary" data-act="drillAgainWrong">틀렸던 문제만 다시</button>`:''}<button class="btn" data-act="drillRestart">처음부터 다시</button><button class="btn ghost" data-act="quitDrill">암기 홈으로</button></div>
+  </section>`;
+}
+
+/* =========================================================
+   EXAM
+   ========================================================= */
+function startExam(ids, title, sub, unit){
+  const order = (unit && !S.examShuffle) ? ids.slice() : (unit ? shuf(ids.slice()) : ids.slice());
+  S.exam={title, sub, unit:unit||0, ids:order, ans:{}, inst:{}, t0:Date.now(), graded:null, confirm:0};
+  order.forEach(id=>{ S.exam.inst[id]=makeInst(QMAP[id],'type'); });
+  S.tab='exam'; S.examView='paper'; render(); window.scrollTo(0,0);
+}
+function gradeExam(){
+  const e=S.exam, res={}, before={}; let ok=0;
+  e.ids.forEach(id=>{ const r=judge(e.inst[id], e.ans[id]); res[id]=r; if(r) ok++; before[id]=lvOf(id); applyLevel(id, r, 'type'); });
+  const secs=(Date.now()-e.t0)/1000, score=Math.round(ok/e.ids.length*100);
+  e.graded={res, ok, score, secs, before};
+  const h={t:Date.now(), k:'test', title:e.title, unit:e.unit, n:e.ids.length, ok, score, secs, wrong:e.ids.filter(id=>!res[id])};
+  L().hist.unshift(h); trimHist(); e.histT=h.t; save(); render(); window.scrollTo(0,0);
+}
+function acceptExam(id){
+  const e=S.exam, g=e.graded; if(!g || g.res[id]) return;
+  g.res[id]=true; g.ok++; g.score=Math.round(g.ok/e.ids.length*100);
+  const r=qrec(id); r.ng=Math.max(0,r.ng-1); r.ok++; r.lv=levelUp(g.before[id],'type',QMAP[id]);
+  const h=L().hist.find(x=>x.t===e.histT); if(h){ h.ok=g.ok; h.score=g.score; h.wrong=h.wrong.filter(v=>v!==id); }
+  save(); render();
+}
+function renderExamHome(){
+  const r=L();
+  const cards=UNITS.map(u=>{ const n=unitIds(u.id).length, tests=r.hist.filter(h=>h.k==='test'&&h.unit===u.id), best=bestTest(r,u.id);
+    return `<div class="ecard"><div class="ur-t"><span class="un">${u.id}단원</span><b>${u.title}</b><span class="ur">${u.range} · ${n}문항</span></div>
+      <p class="es" style="margin:0">${best!=null?`최고 <b>${best}</b>점 · 최근 <b>${tests[0].score}</b>점 · ${tests.length}번 봄`:'아직 안 봤어요'}</p>
+      <button class="btn primary sm" data-act="examUnit" data-u="${u.id}">시험지 받기</button></div>`; }).join('');
+  const rr=S.rnd, ranges=[['all','전체'],['h','4-H 상식'],['a','농업상식'],['weak','약한 문제']];
+  const recent=r.hist.filter(h=>h.k==='test').slice(0,8);
+  return `<section><h1 class="h1">시험지</h1><p class="sub">대회처럼 답을 직접 써요. 보기가 있는 문제는 자료 그대로 보기를 골라요. 채점하면 틀린 문제는 잎이 떨어지고 오답 노트로 가요.</p></section>
+  <section><h2 class="h2">단원별 시험지</h2>
+    <div class="ecards">${cards}</div>
+    <label class="tog" style="margin-top:10px"><input type="checkbox" id="eshuf" data-act="examShuffle" ${S.examShuffle?'checked':''}> 단원 시험도 문제 순서 섞기</label>
+  </section>
+  <section class="panel cfg"><h2 class="h2" style="margin:0">랜덤 시험</h2>
+    <div class="cfg-r"><span>문항 수</span>${[10,20,30].map(n=>`<button class="chip${rr.count===n?' on':''}" data-act="rcount" data-n="${n}">${n}문항</button>`).join('')}</div>
+    <div class="cfg-r"><span>범위</span>${ranges.map(([k,l])=>`<button class="chip${rr.range===k?' on':''}" data-act="rrange" data-r="${k}">${l}</button>`).join('')}</div>
+    <div><button class="btn primary lg" data-act="examRandom">랜덤 시험 시작</button></div>
+  </section>
+  ${recent.length?`<section><h2 class="h2">최근 시험</h2><div class="tbl-wrap"><table class="tbl"><thead><tr><th>날짜</th><th>시험</th><th class="r">점수</th><th class="r">맞힘</th><th class="r">시간</th></tr></thead><tbody>
+    ${recent.map(h=>`<tr><td class="num">${fmtDate(h.t)}</td><td>${esc(h.title)}</td><td class="r"><b>${h.score}</b></td><td class="r">${h.ok}/${h.n}</td><td class="r">${fmtTime(h.secs)}</td></tr>`).join('')}</tbody></table></div></section>`:''}`;
+}
+function renderPQ(id, i){
+  const e=S.exam, inst=e.inst[id], q=QMAP[id], g=e.graded, v=e.ans[id], r=g?g.res[id]:null;
+  let ctl='';
+  if(inst.type==='short'){
+    ctl = g ? `<div class="pans"><span class="mine${r?'':' x'}">${v?esc(v):'(빈칸)'}</span>${r?'':`<span class="right">정답 ${esc(inst.a)}</span>`}</div>`
+            : `<input class="pin" data-eq="${id}" value="${esc(v||'')}" placeholder="답 쓰기" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="${i+1}번 답">`;
+  } else {
+    const opts = inst.type==='ox' ? ['O','X'] : inst.o;
+    ctl = `<div class="popts${inst.type==='ox'?' ox':''}" data-q="${id}">${opts.map((o,k)=>{ const val=inst.type==='ox'?o:k; let cls='popt'; if(v===val) cls+=' sel';
+      if(g){ const right=inst.type==='ox'?o===inst.a:k===inst.c; if(right) cls+=' right'; else if(v===val) cls+=' wrong'; }
+      return `<button class="${cls}" data-act="eopt" data-q="${id}" data-v="${val}" ${g?'disabled':''}>${inst.type==='ox'?'':`<span class="opt-n">${k+1}</span>`}${esc(o)}</button>`; }).join('')}</div>`;
+  }
+  const mark = g ? (r ? `<svg class="mk" viewBox="0 0 40 40" aria-label="맞음"><circle cx="20" cy="20" r="16"/></svg>` : `<svg class="mk" viewBox="0 0 40 40" aria-label="틀림"><path d="M9 33L33 7"/></svg>`) : '';
+  return `<li class="pq" id="pq-${id}"><div class="pnum">${mark}<span>${i+1}</span></div><div class="pbody">
+    <p class="pmeta">${CAT_NAME[q.cat]} ${q.n}번${inst.type==='ox'?' · O/X':''}</p><p class="ptext">${qhtml(inst.q)}</p>${ctl}
+    ${g&&!r&&inst.type==='short'&&v?`<button class="link" data-act="eaccept" data-q="${id}">내 답도 맞아요 (인정)</button>`:''}
+    ${g&&q.note?`<p class="note">${esc(q.note)}</p>`:''}</div></li>`;
+}
+function renderExam(){
+  const e=S.exam, g=e.graded;
+  let h=`<div class="ptop"><button class="btn ghost sm" data-act="examBack">← ${g?'시험 목록':'나가기'}</button>${g?'':'<span class="tiny">빈칸 없이 다 풀고 맨 아래에서 채점해요</span>'}</div>
+  <section class="paper"><header class="ph">
+    <div><p class="ph-k">4-H 경진대회 대비</p><h2 class="ph-t">${esc(e.title)}</h2><p class="ph-m">${esc(e.sub)} · ${e.ids.length}문항</p></div>
+    <div class="ph-r"><div><span>이름</span><b>${esc(S.who)}</b></div><div><span>시간</span><b id="elapsed">${fmtTime(g?g.secs:(Date.now()-e.t0)/1000)}</b></div>${g?`<div class="stamp" role="img" aria-label="${g.score}점"><b>${g.score}</b><span>점</span></div>`:''}</div>
+  </header>`;
+  if(g){ const wrong=e.ids.filter(id=>!g.res[id]);
+    h+=`<div class="gsum"><p>맞힌 문제 <b class="num">${g.ok}</b> / ${e.ids.length} · 걸린 시간 ${fmtTime(g.secs)}</p>
+      <div class="row">${wrong.length?`<button class="btn primary sm" data-act="examWrongDrill">틀린 ${wrong.length}문제 외우기</button>`:''}<button class="btn sm" data-act="examRetry">다시 풀기</button></div></div>`; }
+  h+=`<ol class="plist">${e.ids.map(renderPQ).join('')}</ol>`;
+  if(!g) h+=`<div class="pfoot">${e.confirm?`<div class="confirm"><p>아직 안 푼 문제가 ${e.confirm}개 있어요. 그래도 채점할까요?</p><div class="row" style="justify-content:center"><button class="btn primary" data-act="gradeNow">채점하기</button><button class="btn" data-act="gradeCancel">계속 풀기</button></div></div>`:`<button class="btn primary lg" data-act="grade">다 풀었어요, 채점하기</button>`}</div>`;
+  return h+`</section>`;
+}
+
+/* =========================================================
+   RECITE (4-H 서약 · 애국가)
+   ========================================================= */
+function workFor(tid){
+  const rv=S.rv[tid], sec=rv.stage==='frame'?'_frame':rv.sec, key=`${tid}|${sec}|${rv.stage}`;
+  if(!S.work || S.work.key!==key) S.work=newWork(tid, sec, rv.stage, key);
+  return S.work;
+}
+function newWork(tid, sec, stage, key){
+  const w={key, tid, sec, stage, vals:{}, checked:false, res:{}, passed:false};
+  if(stage==='order'){ w.chunks=chunksOf(secOf(tid,sec)); w.pool=shuf(w.chunks.map((_,i)=>i)); w.n=0; w.mistakes=0; w.used=[]; w.shake=-1; }
+  if(stage==='half') w.parity=rand(2);
+  if(stage==='frame'){ w.opts={}; TEXTS[tid].frames.forEach((f,ti)=>f.cols.forEach((c,ci)=>{ if(ci>0) w.opts[ti+'_'+ci]=shuf(f.rows.map(r=>r[ci])); })); }
+  return w;
+}
+function passStage(w, best){
+  const r=srec(w.tid, w.sec, w.stage); r.done=true; r.best=Math.max(r.best||0, best); r.tries=(r.tries||0)+1;
+  const T=TEXTS[w.tid], s=secOf(w.tid,w.sec);
+  L().hist.unshift({t:Date.now(), k:'recite', title:`${T.name}${s&&T.sections.length>1?' '+s.label:''} · ${STG[w.stage].name}`, best}); trimHist(); save();
+  w.passed=true;
+}
+function nextStageKey(tid){
+  const rv=S.rv[tid], i=STAGES.findIndex(s=>s.key===rv.stage);
+  return i<STAGES.length-1 ? STAGES[i+1].key : null;
+}
+function firstUndone(tid, sec){
+  const r=L(); for(const st of STAGES){ const d = st.key==='frame' ? srecGet(r,tid,'_frame','frame').done : srecGet(r,tid,sec,st.key).done; if(!d) return st.key; }
+  return 'whole';
+}
+function blanks(tid, w){
+  const sec=secOf(tid, w.sec), out=[];
+  sec.lines.forEach((ln,li)=>{
+    if(w.stage==='key') segs(ln).forEach((s,si)=>{ if(s.k) out.push({wk:`k${li}_${si}`, ans:s.s}); });
+    if(w.stage==='half') plainLine(ln).split(/\s+/).forEach((t,ti)=>{ if(ti%2===w.parity) out.push({wk:`h${li}_${ti}`, ans:t}); });
+  });
+  return out;
+}
+function inlW(ans){ const n=[...ans.replace(/\([^)]*\)/g,'').replace(/[.,]/g,'')].length; return `${Math.max(2.2, n*1.0+0.7)}em`; }
+function inlInput(w, wk, ans){
+  const v=w.vals[wk]||'', st=w.checked?(w.res[wk]?' ok':' ng'):'';
+  return `<input class="inl${st}" data-wk="${wk}" value="${esc(v)}" style="width:${inlW(ans)}" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="빈칸">${w.checked&&!w.res[wk]?`<span class="inl-ans">${esc(ans.replace(/\([^)]*\)/g,''))}</span>`:''}`;
+}
+function lcs(a,b){
+  const n=a.length,m=b.length, dp=Array.from({length:n+1},()=>new Uint16Array(m+1));
+  for(let i=n-1;i>=0;i--) for(let j=m-1;j>=0;j--) dp[i][j] = a[i]===b[j] ? dp[i+1][j+1]+1 : Math.max(dp[i+1][j], dp[i][j+1]);
+  const ra=new Array(n).fill(false), rb=new Array(m).fill(false); let i=0,j=0;
+  while(i<n&&j<m){ if(a[i]===b[j]){ ra[i]=rb[j]=true; i++; j++; } else if(dp[i+1][j]>=dp[i][j+1]) i++; else j++; }
+  return {len:dp[0][0], ra, rb};
+}
+function diffView(ref, inp){
+  const rc=[...ref], ic=[...String(inp||'').normalize('NFC')];
+  const rIdx=[], rN=[], iIdx=[], iN=[];
+  rc.forEach((c,k)=>{ if(isScored(c)){ rIdx.push(k); rN.push(c.toLowerCase()); } });
+  ic.forEach((c,k)=>{ if(isScored(c)){ iIdx.push(k); iN.push(c.toLowerCase()); } });
+  const r=lcs(rN,iN), rm=new Array(rc.length).fill(null), im=new Array(ic.length).fill(null);
+  rIdx.forEach((c,k)=>rm[c]=r.ra[k]); iIdx.forEach((c,k)=>im[c]=r.rb[k]);
+  const refHtml=rc.map((c,k)=>rm[k]===false?`<span class="dmiss">${esc(c)}</span>`:esc(c)).join('').replace(/\n/g,'<br>');
+  const inHtml=ic.map((c,k)=>im[k]===false?`<span class="dext">${esc(c)}</span>`:esc(c)).join('').replace(/\n/g,'<br>');
+  return {acc:Math.round(r.len/Math.max(rN.length,iN.length,1)*100), perfect:r.len===rN.length && iN.length===rN.length, refHtml, inHtml, missing:rN.length-r.len, extra:iN.length-r.len};
+}
+const secRefText = sec => sec.lines.map(l=>plainLine(l).replace(/\([^)]*\)/g,'')).join('\n');
+
+function stageBody(tid){
+  const T=TEXTS[tid], rv=S.rv[tid], w=workFor(tid), st=STG[rv.stage];
+  const sec = secOf(tid, rv.sec);
+  const nxt = nextStageKey(tid);
+  const passBox = w.passed ? `<div class="pass"><b>통과!</b>${nxt?`<button class="btn primary" data-act="rstage" data-t="${tid}" data-st="${nxt}">다음 단계: ${STG[nxt].name}</button>`:`<span>${tid==='anthem'?'다른 절도 해 봐요.':'서약을 통째로 외웠어요.'}</span>`}<button class="btn sm ghost" data-act="stageReset">한 번 더</button></div>` : '';
+  const head = `<div class="stage-h"><h3>${st.n}단계 · ${st.name}${rv.stage!=='frame'&&T.sections.length>1?` <small class="ur">${sec.label}</small>`:''}</h3>${(rv.stage==='frame'?srecGet(L(),tid,'_frame','frame'):srecGet(L(),tid,rv.sec,rv.stage)).done?'<span class="kbadge drill">통과한 단계</span>':''}</div><p class="shint">${st.hint}</p>`;
+  let b='';
+
+  if(rv.stage==='read'){
+    const r=srec(tid, rv.sec, 'read');
+    b+=`<div class="rtext">${sec.lines.map(l=>`<p>${segs(l).map(s=>s.k?`<span class="kw">${fmtR(s.s)}</span>`:fmtR(s.s)).join('')}</p>`).join('')}
+      ${tid==='anthem'&&rv.sec!=='ch'?`<span class="lab">후렴 (절마다 이어서 불러요)</span>${secOf('anthem','ch').lines.map(l=>`<p class="chorus">${esc(plainLine(l))}</p>`).join('')}`:''}</div>`;
+    if(tid==='pledge') b+=`<div class="meaning">${[['智','지','Head','머리'],['德','덕','Heart','마음'],['勞','노','Hands','손'],['體','체','Health','건강']].map(x=>`<div><b>${x[0]}</b><span>${x[1]}육 · ${x[2]}</span><em>나의 ${x[3]}</em></div>`).join('')}</div>
+      <p class="tiny">4-H의 네 H(Head·Heart·Hands·Health)가 서약의 둘째~다섯째 줄이에요. 머리는 생각, 마음은 충성, 손은 봉사, 건강은 좋은 생활.</p>`;
+    if(tid==='anthem'){ const g=ANTHEM.gloss[rv.sec]||[];
+      b+=`${g.length?`<dl class="gloss">${g.map(x=>`<dt>${esc(x[0])}</dt><dd>${esc(x[1])}</dd>`).join('')}</dl>`:''}<p class="tiny">1~4절 첫 글자는 <b>동 · 남 · 가 · 이</b>. 동해 → 남산 → 가을 하늘 → 이 기상.</p>`; }
+    b+=`<div class="reads">${[0,1,2].map(i=>`<span class="dot${i<Math.min(3,r.reads||0)?' on':''}"></span>`).join('')}
+      <button class="btn primary" data-act="readOne">한 번 읽었어요</button><span class="tiny num" style="margin:0">${r.reads||0}번 읽음</span></div>`;
+  }
+
+  else if(rv.stage==='frame'){
+    T.frames.forEach((f,ti)=>{
+      b+=`<div><h4 class="h3" style="margin-top:0">${esc(f.title)}</h4><div class="frame-t"><table><thead><tr>${f.cols.map(c=>`<th>${esc(c)}</th>`).join('')}</tr></thead><tbody>
+        ${f.rows.map((row,ri)=>`<tr>${row.map((cell,ci)=>{ if(ci===0) return `<td>${esc(cell)}</td>`;
+          const wk=`f${ti}_${ri}_${ci}`, v=w.vals[wk]||'', cls=w.checked?(w.res[wk]?' ok':' ng'):'';
+          return `<td><select class="fsel${cls}" data-wk="${wk}" aria-label="${esc(row[0])} ${esc(f.cols[ci])}"><option value="">고르기</option>${w.opts[ti+'_'+ci].map(o=>`<option${v===o?' selected':''}>${esc(o)}</option>`).join('')}</select></td>`; }).join('')}</tr>`).join('')}
+      </tbody></table></div></div>`;
+    });
+    if(!w.passed) b+=`<div class="row"><button class="btn primary" id="stageCheck" data-act="frameCheck">채점하기</button></div>`;
+    if(w.checked && !w.passed) b+=`<p class="miss-msg">빨간 칸을 다시 골라 봐요.</p>`;
+  }
+
+  else if(rv.stage==='order'){
+    const placed=w.chunks.slice(0,w.n); let doneHtml='';
+    if(!placed.length) doneHtml='<span class="tph">처음 조각부터 눌러요</span>';
+    else { let cur=-1; placed.forEach(c=>{ if(c.li!==cur){ if(cur>=0) doneHtml+='</p>'; doneHtml+='<p>'; cur=c.li; } else doneHtml+=' '; doneHtml+=fmtR(c.t); }); doneHtml+='</p>'; }
+    b+=`<div class="tiles-done" aria-live="polite">${doneHtml}</div>`;
+    if(w.n<w.chunks.length) b+=`<div class="tiles">${w.pool.filter(i=>!w.used.includes(i)).map(i=>`<button class="tile${w.shake===i?' shake':''}" data-act="tile" data-i="${i}">${fmtR(w.chunks[i].t)}</button>`).join('')}</div>
+      <p class="tiny">실수 ${w.mistakes}번</p>`;
+    else if(!w.passed) b+=`<p class="miss-msg">다 맞췄지만 실수가 ${w.mistakes}번이에요. 2번 이하로 한 번 더!</p><div class="row"><button class="btn primary" data-act="stageReset">다시 하기</button></div>`;
+  }
+
+  else if(rv.stage==='key' || rv.stage==='half'){
+    const bl=blanks(tid,w), bm=Object.fromEntries(bl.map(x=>[x.wk,x.ans]));
+    b+=`<div class="fill">${sec.lines.map((ln,li)=>{
+      if(rv.stage==='key') return `<p>${segs(ln).map((s,si)=>s.k?inlInput(w,`k${li}_${si}`,s.s):fmtR(s.s)).join('')}</p>`;
+      return `<p>${plainLine(ln).split(/\s+/).map((t,ti)=>bm[`h${li}_${ti}`]!=null?inlInput(w,`h${li}_${ti}`,t):fmtR(t)).join(' ')}</p>`;
+    }).join('')}</div>`;
+    const okN=bl.filter(x=>w.res[x.wk]).length;
+    if(!w.passed) b+=`<div class="row"><button class="btn primary" id="stageCheck" data-act="blankCheck">채점하기</button>${rv.stage==='half'?`<button class="btn ghost" data-act="halfFlip">다른 칸으로 바꾸기</button>`:''}</div>`;
+    if(w.checked && !w.passed) b+=`<p class="miss-msg">${okN} / ${bl.length}칸 맞았어요. 빨간 칸을 고쳐서 다시 채점해요.</p>`;
+  }
+
+  else if(rv.stage==='first'){
+    b+=`<div>${sec.lines.map((ln,li)=>{ const toks=plainLine(ln).split(/\s+/);
+      const hint=toks.map(t=>{ const c=[...t.replace(/\([^)]*\)/g,'').replace(/[.,]/g,'')]; return c[0]+'○'.repeat(Math.max(0,c.length-1)); }).join('  ');
+      const wk='l'+li, v=w.vals[wk]||'', cls=w.checked?(w.res[wk]?' ok':' ng'):'';
+      const dv = w.checked && !w.res[wk] ? diffView(plainLine(ln).replace(/\([^)]*\)/g,''), v) : null;
+      return `<div class="fl"><span class="fl-hint">${esc(hint)}</span><input class="lin${cls}" data-wk="${wk}" value="${esc(v)}" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="${li+1}째 줄">
+        ${dv?`<p class="tiny" style="margin:2px 0 0">정답: <span class="diff" style="display:inline;padding:0;border:0;font-size:15px">${dv.refHtml}</span></p>`:''}</div>`; }).join('')}</div>`;
+    const okN=sec.lines.filter((_,li)=>w.res['l'+li]).length;
+    if(!w.passed) b+=`<div class="row"><button class="btn primary" id="stageCheck" data-act="firstCheck">채점하기</button></div>`;
+    if(w.checked && !w.passed) b+=`<p class="miss-msg">${okN} / ${sec.lines.length}줄 맞았어요. 빨간 밑줄 글자가 빠졌거나 틀린 곳이에요.</p>`;
+  }
+
+  else if(rv.stage==='whole'){
+    const v=w.vals.whole||'';
+    b+=`<textarea class="whole" data-wk="whole" placeholder="${esc(sec.label)}을(를) 처음부터 끝까지 써요" aria-label="통째로 쓰기">${esc(v)}</textarea>`;
+    if(!w.passed) b+=`<div class="row"><button class="btn primary" id="stageCheck" data-act="wholeCheck">채점하기</button></div>`;
+    if(w.checked && w.dv){ const dv=w.dv;
+      b+=`<div class="row" style="justify-content:space-between"><span class="acc${dv.perfect?'':' ng'}">${dv.acc}%</span><span class="tiny" style="margin:0">빠진·틀린 글자 ${dv.missing}개 · 더 쓴 글자 ${dv.extra}개</span></div>
+        <div><p class="diff-l">정답 (빨간 물결 = 빠졌거나 틀린 글자)</p><div class="diff">${dv.refHtml}</div></div>
+        <div><p class="diff-l">내가 쓴 글 (주황 = 정답에 없는 글자)</p><div class="diff">${dv.inHtml||'(비어 있음)'}</div></div>`; }
+  }
+  return head + b + passBox;
+}
+function renderRecite(tid){
+  const T=TEXTS[tid], rv=S.rv[tid], r=L(), prog=textProg(r,tid);
+  const chips = T.sections.length>1 ? `<div class="chips" role="tablist" aria-label="절 고르기">${T.sections.map(s=>{ const p=secProg(r,tid,s.key); return `<button class="chip${rv.sec===s.key?' on':''}" data-act="rsec" data-t="${tid}" data-s="${s.key}">${s.label}<small>${p.done}/${p.total}</small></button>`; }).join('')}</div>` : '';
+  const steps = `<ol class="steps">${STAGES.map(st=>{ const done = st.key==='frame' ? srecGet(r,tid,'_frame','frame').done : srecGet(r,tid,rv.sec,st.key).done;
+    return `<li><button class="step${rv.stage===st.key?' on':''}${done?' done':''}" data-act="rstage" data-t="${tid}" data-st="${st.key}" aria-current="${rv.stage===st.key?'step':'false'}"><span class="sn">${done?'✓':st.n}</span><span class="sl">${st.name}</span></button></li>`; }).join('')}</ol>`;
+  return `<section class="rhead"><div><h1 class="h1">${T.name}</h1><p class="sub">${T.sub}</p></div><div class="rprog"><b>${prog.done}</b> / ${prog.total} 단계</div></section>
+    ${chips}${steps}<section class="panel stage" id="stage">${stageBody(tid)}</section>`;
+}
+function curTid(){ return S.tab==='pledge'?'pledge':'anthem'; }
+
+/* =========================================================
+   RECORDS
+   ========================================================= */
+function encodeCode(){
+  const json=JSON.stringify({v:1, name:S.who, data:L()});
+  const bytes=new TextEncoder().encode(json); let bin=''; bytes.forEach(x=>bin+=String.fromCharCode(x));
+  return '4H1.'+btoa(bin);
+}
+function decodeCode(code){
+  code=String(code||'').trim(); if(!code.startsWith('4H1.')) throw new Error('form');
+  const bin=atob(code.slice(4)); const bytes=Uint8Array.from(bin, c=>c.charCodeAt(0));
+  const p=JSON.parse(new TextDecoder().decode(bytes)); if(!p || !p.data || !p.data.q) throw new Error('form'); return p;
+}
+function renderRecords(){
+  const r=L(), p=learnerOf(S.who), all=QS.map(q=>q.id), c=counts(all);
+  const tests=r.hist.filter(h=>h.k==='test'), best=tests.length?Math.max(...tests.map(h=>h.score)):null;
+  const days=new Set(r.hist.map(h=>dayKey(h.t))).size;
+  const pp=textProg(r,'pledge'), ap=textProg(r,'anthem');
+  const wr=wrongIds().slice(0,15);
+  const recStages=STAGES.filter(s=>s.key!=='frame');
+  const progRow=(tid,s)=>`<tr><td>${s.label}</td>${recStages.map(st=>`<td><span class="pd${srecGet(r,tid,s.key,st.key).done?' on':''}" aria-label="${st.name} ${srecGet(r,tid,s.key,st.key).done?'통과':'아직'}"></span></td>`).join('')}</tr>`;
+  return `<section class="rec-head"><span class="av lg" style="--c:${p.color}">${p.init}</span><div><h1 class="h1">${esc(S.who)}의 학습 기록</h1><p class="sub" style="margin-top:2px">공부한 날 ${days}일${r.hist.length?` · 마지막 공부 ${fmtDate(r.hist[0].t)}`:''}</p></div></section>
+  <section class="kpis">
+    <div class="kpi"><span>네잎 완성</span><b>${c[4]}</b><small>/ ${all.length}</small></div>
+    <div class="kpi"><span>시험 최고점</span><b>${best!=null?best:'—'}</b><small>${best!=null?'점':''}</small></div>
+    <div class="kpi"><span>4-H 서약</span><b>${pp.done}</b><small>/ ${pp.total} 단계</small></div>
+    <div class="kpi"><span>애국가</span><b>${ap.done}</b><small>/ ${ap.total} 단계</small></div>
+  </section>
+  <section><h2 class="h2">단원별 숙달</h2>
+    <div class="tbl-wrap"><table class="tbl"><thead><tr><th>단원</th><th style="width:40%">잎 자란 정도</th><th class="r">네잎</th><th class="r">시험 최고</th></tr></thead><tbody>
+    ${UNITS.map(u=>{ const ids=unitIds(u.id), uc=counts(ids), bt=bestTest(r,u.id); return `<tr><td>${u.id}단원 ${u.title}</td><td style="min-width:120px">${mbar(uc)}</td><td class="r">${uc[4]}/${ids.length}</td><td class="r">${bt!=null?bt+'점':'—'}</td></tr>`; }).join('')}
+    </tbody></table></div>${legend()}
+  </section>
+  <section><h2 class="h2">서약 · 애국가 진도</h2>
+    <div class="tbl-wrap prog-grid"><table><thead><tr><th></th>${recStages.map(s=>`<th>${s.name}</th>`).join('')}</tr></thead><tbody>
+      ${progRow('pledge',{key:'all',label:'4-H 서약'})}
+      ${ANTHEM.sections.map(s=>progRow('anthem',{key:s.key,label:'애국가 '+s.label})).join('')}
+    </tbody></table></div>
+    <p class="tiny">뼈대 잡기: 서약 ${srecGet(r,'pledge','_frame','frame').done?'통과':'아직'} · 애국가 ${srecGet(r,'anthem','_frame','frame').done?'통과':'아직'}</p>
+  </section>
+  <section><h2 class="h2">오답 노트</h2>
+    ${wr.length?`<div class="panel" style="padding:6px 16px"><ul class="wlist">${wr.map(id=>{ const q=QMAP[id]; return `<li style="grid-template-columns:auto minmax(0,1fr) auto"><span class="qno">${q.cat==='h'?'4-H':'농업'} ${q.n}</span><span class="wq">${esc(shortQ(q))}<br><b class="wa" style="text-align:left">${esc(ansText(q))}</b></span><span class="wc">${r.q[id].ng}번 틀림</span></li>`; }).join('')}</ul></div>
+      <div class="row" style="margin-top:10px"><button class="btn primary" data-act="drillWrong">오답만 외우기</button></div>`:`<p class="sub">아직 틀린 문제가 없어요.</p>`}
+  </section>
+  <section><h2 class="h2">학습 일지</h2>
+    ${r.hist.length?`<div class="tbl-wrap"><table class="tbl"><thead><tr><th>날짜</th><th>종류</th><th>내용</th><th class="r">결과</th></tr></thead><tbody>
+      ${r.hist.slice(0,25).map(h=>`<tr><td class="num">${fmtDate(h.t)}</td><td><span class="kbadge ${h.k}">${h.k==='test'?'시험':h.k==='drill'?'암기':'외우기'}</span></td><td class="wrap">${esc(h.title)}</td><td class="r">${h.k==='test'?`<b>${h.score}</b>점`:h.k==='drill'?`첫 시도 ${h.ok}/${h.n}`:`${h.best}%`}</td></tr>`).join('')}
+    </tbody></table></div>`:`<p class="sub">공부를 시작하면 여기에 쌓여요.</p>`}
+  </section>
+  <section class="panel"><h2 class="h2">기록 옮기기</h2>
+    <p class="sub" style="margin-top:0">기록은 이 기기 브라우저에만 저장돼요. 아래 코드를 복사해 두면 다른 기기에서 그대로 불러오거나 선생님께 보낼 수 있어요.</p>
+    <textarea class="code" id="codeOut" readonly aria-label="내 기록 코드">${esc(encodeCode())}</textarea>
+    <div class="row" style="margin-top:8px"><button class="btn sm" data-act="copyCode">기록 코드 복사</button></div>
+    <h3 class="h3">다른 기기의 기록 불러오기</h3>
+    <textarea class="code" id="restoreIn" placeholder="4H1.로 시작하는 기록 코드를 붙여 넣어요" aria-label="기록 코드 붙여 넣기">${esc(S.restoreText)}</textarea>
+    <div class="row" style="margin-top:8px"><button class="btn sm" data-act="restore">${esc(S.who)}의 기록으로 불러오기</button>${S.restoreMsg?`<span class="tiny" style="margin:0">${esc(S.restoreMsg)}</span>`:''}</div>
+    <h3 class="h3">처음부터 다시</h3>
+    ${S.resetAsk?`<p class="miss-msg">${esc(S.who)}의 기록을 모두 지울까요? 되돌릴 수 없어요.</p><div class="row" style="margin-top:8px"><button class="btn warn sm" data-act="resetDo">모두 지우기</button><button class="btn sm" data-act="resetCancel">그만두기</button></div>`
+      :`<button class="btn warn sm" data-act="resetAsk">${esc(S.who)}의 기록 지우기</button>`}
+  </section>`;
+}
+
+/* =========================================================
+   RENDER
+   ========================================================= */
+let tick=null;
+function render(){
+  const app=$('#app'); let body;
+  if(!S.who) body=renderPick();
+  else if(S.tab==='study') body = (S.studyView==='drill'&&S.drill) ? renderDrill() : (S.studyView==='list' ? renderList() : renderStudy());
+  else if(S.tab==='exam') body = (S.examView==='paper'&&S.exam) ? renderExam() : renderExamHome();
+  else if(S.tab==='pledge'||S.tab==='anthem') body = renderRecite(S.tab);
+  else body = renderRecords();
+  app.innerHTML = header() + `<main class="main" id="main">${body}</main>`;
+  clearInterval(tick);
+  if(S.who && S.tab==='exam' && S.examView==='paper' && S.exam && !S.exam.graded){
+    tick=setInterval(()=>{ const el=$('#elapsed'); if(el && S.exam) el.textContent=fmtTime((Date.now()-S.exam.t0)/1000); },1000);
+  }
+  if(S.who && S.tab==='study' && S.studyView==='drill' && S.drill){
+    const d=S.drill;
+    if(d.phase==='ask' && d.mode==='type' && d.inst.type==='short') $('#dIn')?.focus({preventScroll:true});
+    else if(d.phase==='feedback') $('#dNext')?.focus({preventScroll:true});
+    else if(d.phase==='ask' && d.mode==='card') $('#dReveal')?.focus({preventScroll:true});
+  }
+}
+
+/* =========================================================
+   EVENTS
+   ========================================================= */
+const handlers = {
+  switch(){ S.who=null; S.drill=null; S.exam=null; S.work=null; S.resetAsk=false; render(); window.scrollTo(0,0); },
+  choose(b){ S.who=b.dataset.who; LF(S.who); DB.last=S.who; save(); S.tab='study'; S.studyView='home'; S.examView='home'; S.restoreMsg=''; S.restoreText=''; render(); window.scrollTo(0,0); },
+  tab(b){ S.tab=b.dataset.tab; S.resetAsk=false; if(S.tab==='study' && S.studyView==='list') S.studyView='home'; render(); window.scrollTo(0,0); },
+  mode(b){ S.mode=b.dataset.mode; saveUI(); render(); },
+  shuffle(b){ S.shuffle=b.checked; saveUI(); },
+  examShuffle(b){ S.examShuffle=b.checked; },
+  list(b){ S.listUnit=+b.dataset.u; S.studyView='list'; render(); window.scrollTo(0,0); },
+  listBack(){ S.studyView='home'; render(); window.scrollTo(0,0); },
+  hideAns(b){ S.hideAns=b.checked; render(); },
+  peek(b){ b.classList.toggle('hid'); },
+  drillUnit(b){ const u=UNITS.find(x=>x.id===+b.dataset.u); startDrill(unitIds(u.id), `${u.id}단원 ${u.title}`); },
+  drillWeak(){ startDrill(weakIds(20), '약한 문제 20개'); },
+  drillWrong(){ startDrill(wrongIds().slice(0,30), '오답 노트'); },
+  drillAll(){ const keep=S.shuffle; S.shuffle=true; startDrill(QS.map(q=>q.id), '전체 125문제'); S.shuffle=keep; },
+  drillAgainWrong(){ const d=S.drill; startDrill(d.firstNg.slice(), d.title.replace(/ · 틀린 문제$/,'')+' · 틀린 문제'); },
+  drillRestart(){ const d=S.drill; startDrill(d.allIds.slice(), d.title); },
+  quitDrill(){ if(S.drill && S.drill.phase!=='end') logDrill(true); S.drill=null; S.studyView='home'; render(); window.scrollTo(0,0); },
+  reveal(){ const d=S.drill; if(d && d.phase==='ask'){ d.phase='reveal'; render(); } },
+  self(b){ const d=S.drill; if(d && d.phase==='reveal') answerDrill(b.dataset.ok==='1', null); },
+  dopt(b){ const d=S.drill; if(!d || d.phase!=='ask') return; const i=+b.dataset.i; answerDrill(i===d.inst.c, i); },
+  dox(b){ const d=S.drill; if(!d || d.phase!=='ask') return; const v=b.dataset.v; answerDrill(v===d.inst.a, v); },
+  dsubmit(){ const d=S.drill; if(!d || d.phase!=='ask') return; const v=($('#dIn')||{}).value||''; if(!clean(v)){ flash('답을 쓰거나 "모르겠어요"를 눌러요'); $('#dIn')?.focus(); return; } answerDrill(judge(d.inst, v), v); },
+  giveup(){ const d=S.drill; if(d && d.phase==='ask') answerDrill(false, ''); },
+  next(){ const d=S.drill; if(d && d.phase==='feedback'){ nextCard(); render(); } },
+  accept(){ acceptDrill(); },
+
+  examUnit(b){ const u=UNITS.find(x=>x.id===+b.dataset.u); startExam(unitIds(u.id), `${u.id}단원 시험지`, `${u.title} ${u.range}`, u.id); },
+  rcount(b){ S.rnd.count=+b.dataset.n; render(); },
+  rrange(b){ S.rnd.range=b.dataset.r; render(); },
+  examRandom(){
+    const {count, range}=S.rnd; let pool;
+    if(range==='weak') pool=weakIds(count);
+    else pool=shuf(QS.filter(q=>range==='all'||q.cat===range).map(q=>q.id)).slice(0,count);
+    const lab={all:'전체',h:'4-H 상식',a:'농업상식',weak:'약한 문제'}[range];
+    startExam(shuf(pool.slice()), `랜덤 시험 ${pool.length}문항`, `범위: ${lab}`, 0);
+  },
+  eopt(b){ const e=S.exam; if(!e || e.graded) return; const id=b.dataset.q, inst=e.inst[id]; const v = inst.type==='ox' ? b.dataset.v : +b.dataset.v;
+    e.ans[id]=v; b.parentElement.querySelectorAll('.popt').forEach(x=>x.classList.toggle('sel', x===b)); },
+  grade(){ const e=S.exam; const empty=e.ids.filter(id=>{ const v=e.ans[id]; return v==null || (typeof v==='string' && !clean(v)); }).length;
+    if(empty){ e.confirm=empty; render(); $('.pfoot')?.scrollIntoView({block:'center'}); } else gradeExam(); },
+  gradeNow(){ S.exam.confirm=0; gradeExam(); },
+  gradeCancel(){ S.exam.confirm=0; render(); const e=S.exam; const first=e.ids.find(id=>e.ans[id]==null||(typeof e.ans[id]==='string'&&!clean(e.ans[id]))); if(first){ const el=$('#pq-'+first); el?.scrollIntoView({block:'center'}); el?.querySelector('input')?.focus({preventScroll:true}); } },
+  eaccept(b){ acceptExam(b.dataset.q); },
+  examBack(){ S.examView='home'; if(S.exam && !S.exam.graded) S.exam=null; render(); window.scrollTo(0,0); },
+  examRetry(){ const e=S.exam; startExam(e.unit?unitIds(e.unit):shuf(e.ids.slice()), e.title, e.sub, e.unit); },
+  examWrongDrill(){ const e=S.exam; startDrill(e.ids.filter(id=>!e.graded.res[id]), e.title+' · 틀린 문제'); },
+
+  rsec(b){ const tid=b.dataset.t, sec=b.dataset.s; S.rv[tid].sec=sec; S.rv[tid].stage=firstUndone(tid,sec); render(); },
+  rstage(b){ const tid=b.dataset.t; S.rv[tid].stage=b.dataset.st; S.work=null; render(); $('#stage')?.scrollIntoView({block:'start', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'}); },
+  stageReset(){ S.work=null; render(); },
+  readOne(){ const tid=curTid(), rv=S.rv[tid], w=workFor(tid); const r=srec(tid, rv.sec, 'read'); r.reads=(r.reads||0)+1;
+    if(r.reads>=3 && !w.passed){ passStage(w, 100); } else save(); render(); },
+  frameCheck(){ const tid=curTid(), w=workFor(tid); let all=true;
+    TEXTS[tid].frames.forEach((f,ti)=>f.rows.forEach((row,ri)=>row.forEach((cell,ci)=>{ if(!ci) return; const wk=`f${ti}_${ri}_${ci}`; const ok=(w.vals[wk]||'')===cell; w.res[wk]=ok; if(!ok) all=false; })));
+    w.checked=true; if(all) passStage(w,100); render(); },
+  tile(b){ const tid=curTid(), w=workFor(tid), i=+b.dataset.i; if(w.used.includes(i) || w.n>=w.chunks.length) return;
+    if(w.chunks[i].t===w.chunks[w.n].t){ w.used.push(i); w.n++; w.shake=-1; if(w.n===w.chunks.length && w.mistakes<=2) passStage(w, Math.max(0,100-w.mistakes*10)); }
+    else { w.mistakes++; w.shake=i; }
+    render(); },
+  blankCheck(){ const tid=curTid(), w=workFor(tid), bl=blanks(tid,w); let all=true;
+    bl.forEach(x=>{ const ok=rnorm(w.vals[x.wk]||'')===rnorm(x.ans) && rnorm(x.ans)!==''; w.res[x.wk]=ok; if(!ok) all=false; });
+    w.checked=true; if(all) passStage(w,100); else { const sr=srec(tid,w.sec,w.stage); sr.best=Math.max(sr.best||0, Math.round(bl.filter(x=>w.res[x.wk]).length/bl.length*100)); save(); }
+    render(); },
+  halfFlip(){ const tid=curTid(), w=workFor(tid); w.parity=1-w.parity; w.vals={}; w.res={}; w.checked=false; render(); },
+  firstCheck(){ const tid=curTid(), w=workFor(tid), sec=secOf(tid,w.sec); let all=true;
+    sec.lines.forEach((ln,li)=>{ const ok=rnorm(w.vals['l'+li]||'')===rnorm(plainLine(ln)); w.res['l'+li]=ok; if(!ok) all=false; });
+    w.checked=true; if(all) passStage(w,100); render(); },
+  wholeCheck(){ const tid=curTid(), w=workFor(tid), sec=secOf(tid,w.sec); w.dv=diffView(secRefText(sec), w.vals.whole||''); w.checked=true;
+    if(w.dv.perfect) passStage(w,100); else { const sr=srec(tid,w.sec,'whole'); sr.best=Math.max(sr.best||0,w.dv.acc); save(); }
+    render(); },
+
+  copyCode(){ const ta=$('#codeOut'); const txt=ta.value;
+    const fallback=()=>{ ta.focus(); ta.select(); flash('코드를 선택했어요. 길게 눌러 복사하세요'); };
+    try{ navigator.clipboard.writeText(txt).then(()=>flash('기록 코드를 복사했어요'), fallback); }catch(e){ fallback(); } },
+  restore(){ try{ const p=decodeCode(S.restoreText); DB.learners[S.who]=p.data; LF(S.who); save(); S.restoreText=''; S.restoreMsg=`${p.name||'다른 기기'}의 기록을 불러왔어요`; }catch(e){ S.restoreMsg='코드가 올바르지 않아요. 4H1.로 시작하는 코드를 통째로 붙여 넣어요'; } render(); },
+  resetAsk(){ S.resetAsk=true; render(); },
+  resetCancel(){ S.resetAsk=false; render(); },
+  resetDo(){ DB.learners[S.who]={q:{},hist:[],rec:{}}; save(); S.resetAsk=false; S.work=null; flash('기록을 지웠어요'); render(); }
+};
+
+document.addEventListener('click', e=>{
+  const b=e.target.closest('[data-act]'); if(!b) return;
+  const act=b.dataset.act; if(!handlers[act]) return;
+  if(b.tagName==='INPUT' && b.type==='checkbox'){ handlers[act](b, e); return; }
+  if(b.tagName==='SELECT' || b.tagName==='TEXTAREA') return;
+  e.preventDefault(); handlers[act](b, e);
+});
+document.addEventListener('input', e=>{
+  const t=e.target;
+  if(t.dataset.eq && S.exam){ S.exam.ans[t.dataset.eq]=t.value; }
+  else if(t.dataset.wk && S.work){ S.work.vals[t.dataset.wk]=t.value; }
+  else if(t.id==='restoreIn'){ S.restoreText=t.value; }
+});
+document.addEventListener('change', e=>{ const t=e.target; if(t.tagName==='SELECT' && t.dataset.wk && S.work) S.work.vals[t.dataset.wk]=t.value; });
+document.addEventListener('keydown', e=>{
+  const t=e.target, tag=t.tagName;
+  if(S.who && S.tab==='study' && S.studyView==='drill' && S.drill){
+    const d=S.drill;
+    if(e.key==='Enter'){
+      if(t.id==='dIn'){ e.preventDefault(); handlers.dsubmit(); return; }
+      if(tag==='BUTTON') return;
+      if(d.phase==='feedback'){ e.preventDefault(); handlers.next(); return; }
+      if(d.phase==='ask' && d.mode==='card'){ e.preventDefault(); handlers.reveal(); return; }
+    }
+    if(tag==='INPUT' || tag==='TEXTAREA' || e.metaKey || e.ctrlKey || e.altKey) return;
+    if(e.key===' ' && d.phase==='ask' && d.mode==='card'){ e.preventDefault(); handlers.reveal(); return; }
+    if(d.phase==='reveal' && (e.key==='1' || e.key==='2')){ e.preventDefault(); handlers.self({dataset:{ok:e.key==='1'?'1':'0'}}); return; }
+    if(d.phase==='ask' && d.mode!=='card'){
+      if(d.inst.type==='mc' && /^[1-9]$/.test(e.key)){ const i=+e.key-1; if(i<d.inst.o.length){ e.preventDefault(); answerDrill(i===d.inst.c, i); } return; }
+      if(d.inst.type==='ox' && /^[oxOX]$/.test(e.key)){ e.preventDefault(); const v=e.key.toUpperCase(); answerDrill(v===d.inst.a, v); return; }
+    }
+    return;
+  }
+  if(e.key==='Enter' && tag==='INPUT' && t.dataset.eq){ e.preventDefault(); const ins=[...document.querySelectorAll('input[data-eq]')]; const i=ins.indexOf(t); if(ins[i+1]) ins[i+1].focus(); else t.blur(); return; }
+  if(e.key==='Enter' && tag==='INPUT' && t.dataset.wk){ e.preventDefault(); const ins=[...document.querySelectorAll('#stage input[data-wk]')]; const i=ins.indexOf(t); if(ins[i+1]) ins[i+1].focus(); else document.getElementById('stageCheck')?.click(); }
+});
+
+render();
+})();
+</script>
+
+</body></html>
